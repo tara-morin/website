@@ -7,9 +7,6 @@ const navItems = {
   '/resume': {
     name: 'resume',
   },
-  '/about': {
-    name: 'about me',
-  },
   '/UX': {
     name: 'UX design projects',
   },
