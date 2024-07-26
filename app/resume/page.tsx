@@ -12,7 +12,7 @@ export default function Page() {
       <BlogPosts />
     
     <p className="mb-2">
-      {'Linked below is the most recent version of my resume.'}
+      {'Linked above is the most recent version of my resume.'}
     </p>
 
     </section>
