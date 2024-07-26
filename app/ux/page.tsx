@@ -11,6 +11,27 @@ export default function Page() {
         <p className="mb-2">
           {`Below are links to the 2 large UX design projects I have completed.`}
         </p>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://sites.google.com/view/rumobi/home"
+          >
+            <p className="ml-2 h-7">RuMoBi</p>
+          </a>
+        </li>
+
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://sites.google.com/view/teamchimps/home"
+          >
+            <p className="ml-2 h-7">KitchenSync</p>
+          </a>
+        </li>
       </section>
     )
   }
