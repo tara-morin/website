@@ -7,7 +7,7 @@ export default function Page() {
         Tara Morin
       </h1>
       <p className="mb-2">
-        {`I'm a rising 4th year at the University of Virginia, double majoring in Computer Science and Cognitive Science.`}
+        {`Welcome to my website! This site has been encoded using Typescript, Javascript, and CSS.`}
       </p>
     </section>
   )
