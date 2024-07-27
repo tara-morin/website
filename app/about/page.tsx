@@ -4,7 +4,7 @@ import { formatDate, getBlogPosts } from 'app/resume/utils'
 import { baseUrl } from 'app/sitemap'
 import React from "react";
 import Image from 'next/image';
-import headshot from "app/rotunda.headshot.jpg"
+import headshot from "app/about/rotunda.headshot.jpg"
 
 console.log(headshot);
 export default function Page() {
