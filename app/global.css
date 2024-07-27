@@ -150,9 +150,11 @@ table {
 }
 
 .text-color {
-  color: rgb(0, 241, 221);
+  color: rgb(9, 169, 255);
   /* Set the desired color */
   font-size: 16px;
 }
 
-
+.background-lightblue{
+  background-color:#6bebff91
+}
