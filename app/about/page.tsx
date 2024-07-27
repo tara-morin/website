@@ -13,7 +13,7 @@ export default function Page() {
         <p className="mb-2">
           {`I am a rising 4th year at the University of Virginia, double majoring in Computer Science and Cognitive Science. `}
         </p>
-        <img src="app/rotunda.headshot.jpg" alt="A headshot of Tara at the UVA Rotunda" width="200" height="300"/>
+        <img src="./app/rotunda.headshot.jpg" alt="A headshot of Tara at the UVA Rotunda" width="200" height="300"/>
       </section>
     )
   }
