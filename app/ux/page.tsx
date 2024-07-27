@@ -13,7 +13,7 @@ export default function Page() {
         </p>
         
           <a
-            className="text-color"
+            className="text-color1"
             rel="noopener noreferrer"
             href="https://sites.google.com/view/rumobi/home"
           >
@@ -23,7 +23,7 @@ export default function Page() {
 
         
           <a
-            className="text-color"
+            className="text-color1"
             rel="noopener noreferrer"
             href="https://sites.google.com/view/teamchimps/home"
           >
