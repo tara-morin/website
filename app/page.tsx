@@ -1,4 +1,6 @@
 
+import React from "react";
+import headshot from "app/components/IMG_6402.jpg"
 
 export default function Page() {
   return (
