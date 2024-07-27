@@ -6,6 +6,7 @@ import React from "react";
 import Image from 'next/image';
 import headshot from "app/rotunda.headshot.jpg"
 
+console.log(headshot);
 export default function Page() {
     return (
       <section>
