@@ -148,3 +148,9 @@ table {
 .title {
   text-wrap: balance;
 }
+
+.text-color {
+  color: rgb(0, 241, 221);
+  /* Set the desired color */
+  font-size: 20px;
+}

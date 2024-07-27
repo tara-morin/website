@@ -13,7 +13,7 @@ export default function Page() {
         </p>
         
           <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            className="text-color"
             rel="noopener noreferrer"
             href="https://sites.google.com/view/rumobi/home"
           >
@@ -23,7 +23,7 @@ export default function Page() {
 
         
           <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            className="text-color"
             rel="noopener noreferrer"
             href="https://sites.google.com/view/teamchimps/home"
           >
