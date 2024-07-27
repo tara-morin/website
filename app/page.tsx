@@ -2,7 +2,7 @@
 
 export default function Page() {
   return (
-    <section>
+    <section className= "background-color">
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
         Tara Morin
       </h1>

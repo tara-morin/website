@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 ::selection {
-  background-color: #47a3f3;
+  background-color: #6bebff91;
   color: #fefefe;
 }
 
@@ -152,5 +152,7 @@ table {
 .text-color {
   color: rgb(0, 241, 221);
   /* Set the desired color */
-  font-size: 20px;
+  font-size: 16px;
 }
+
+
