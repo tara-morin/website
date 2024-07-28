@@ -4,8 +4,8 @@ import { formatDate, getBlogPosts } from 'app/resume/utils'
 import { baseUrl } from 'app/sitemap'
 import React from "react";
 import Image from 'next/image';
+import headshot from 'app/about/rotunda.headshot.jpg'
 
-const headshot= 'app/about/rotunda.headshot.jpg'
 export default function Page() {
     return (
       <section>
@@ -15,7 +15,7 @@ export default function Page() {
         <p className="mb-2">
           {`I am a rising 4th year at the University of Virginia, double majoring in Computer Science and Cognitive Science. `}
         </p>
-        <img src={require (headshot)} alt="A headshot of Tara at the UVA Rotunda" width="200" height="300"/>
+        <Image src={headshot} alt="A headshot of Tara at the UVA Rotunda" width="200" height="300"/>
       </section>
     )
   }
