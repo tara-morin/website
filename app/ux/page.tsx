@@ -23,7 +23,7 @@ export default function Page() {
           >
             <p className="ml-2 h-7">RuMoBi</p>
           </a>
-          <Image src={rumobi} alt="The opening screen of RuMoBi" width="150" height="350"/>
+          <Image src={rumobi} alt="The opening screen of RuMoBi" width="150" height="350" className='style'/>
           <p>
             RuMoBi is the design project I created in a 3 person team during my Creative Interaction Design intensive in the summer of 2024. Our task was to create an app that would enhance the experience of tourists in the city of Heraklion, Crete where we were residing. We conducted interviews with over 30 tourists from a variety of countries, and found that many tourists were bored by the way history was presented at the various histocial sites near the city. Therefore we created RuMoBi, an interactive game where users can collect characters and artifacts as they walk around the city. Each of the weeks on the site reflects a design iteration: Week 1 was comprised of interviews and a low fidelity paper prototype, Week 2 featured a medium prototype created in Figma, and Week 3 had a high fidelity prototype. 
           </p>
@@ -35,7 +35,7 @@ export default function Page() {
           >
             <p className="ml-2 h-7">KitchenSync</p>
           </a>
-          <Image src={kitchen} alt="The logo of KitchenSync." width="300" height="70"/>
+          <Image src={kitchen} alt="The logo of KitchenSync." width="300" height="70" className='style'/>
           <p>
             KitchenSync is a semester long design project in which I led a team of 5 as project manager. The app was designed to streamline all activities related to diet, from making a grocery list, finding a nearby store, montioring nutrients and calories, and tracking a grocery budget. We developed KitchenSync through the 4 phases of the UX lifecycle: Research/Analysis, Design, Prototyping, and Evaluation. 
           </p>
