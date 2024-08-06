@@ -140,6 +140,12 @@ input[type='email'] {
   appearance: none;
 }
 
+style{
+  padding-left: 10px;
+  padding-right:10px;
+  padding-bottom:25px;
+  padding-top:25px;
+}
 table {
   display: block;
   max-width: fit-content;
