@@ -152,10 +152,16 @@ table {
 }
 
 .text-color1 {
-  color: rgb(255, 9, 144);
+  color: rgb(64, 224, 0);
   /* Set the desired color */
   font-size: 16px;
 }
+.text-color2 {
+  color: rgb(255, 39, 39);
+  /* Set the desired color */
+  font-size: 16px;
+}
+
 
 .background-lightblue{
   background-color:#6bebff91
