@@ -140,7 +140,7 @@ input[type='email'] {
   appearance: none;
 }
 
-style{
+.style{
   padding-left: 10px;
   padding-right:10px;
   padding-bottom:25px;
