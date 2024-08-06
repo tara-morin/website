@@ -5,6 +5,8 @@ import { baseUrl } from 'app/sitemap'
 import Image from 'next/image';
 import kitchen from 'app/ux/KitchenSync (2).jpg'
 import rumobi from 'app/ux/rumobi.jpg'
+import React from 'react';
+import './global.css'
 export default function Page() {
     return (
       <section>
