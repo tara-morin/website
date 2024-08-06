@@ -34,7 +34,7 @@ export default function Page() {
           >
             <p className="ml-2 h-7">KitchenSync</p>
           </a>
-          <Image src={kitchen} alt="The logo of KitchenSync." width="400" height="100"/>
+          <Image src={kitchen} alt="The logo of KitchenSync." width="300" height="70"/>
           <p>
             KitchenSync is a semester long design project in which I led a team of 5 as project manager. The app was designed to streamline all activities related to diet, from making a grocery list, finding a nearby store, montioring nutrients and calories, and tracking a grocery budget. We developed KitchenSync through the 4 phases of the UX lifecycle: Research/Analysis, Design, Prototyping, and Evaluation. 
           </p>
