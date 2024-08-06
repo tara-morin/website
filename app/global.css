@@ -154,7 +154,7 @@ table {
 .text-color1 {
   color: rgb(64, 224, 0);
   /* Set the desired color */
-  font-size: 16px;
+  font-size: 32px;
 }
 .text-color2 {
   color: rgb(255, 39, 39);
