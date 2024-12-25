@@ -69,7 +69,7 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        description: <>Welcome to my website! My name is Tara Morin, I am an aspiring software designer located in Northern Virginia.</>
     },
     work: {
         display: true, // set to false to hide this section
