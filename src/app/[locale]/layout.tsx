@@ -8,6 +8,7 @@ import { baseURL, effects, style } from '@/app/resources'
 
 import { Inter } from 'next/font/google'
 import { Source_Code_Pro } from 'next/font/google';
+import{ Damascus } from "@public/fonts/damascus-bold.ttf"
 
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-intl/server';
@@ -49,7 +50,7 @@ export async function generateMetadata(
 	}
 };
 
-const primary = Inter({
+const primary = Damascus({
 	variable: '--font-primary',
 	subsets: ['latin'],
 	display: 'swap',
