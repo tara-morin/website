@@ -8,7 +8,7 @@ import { baseURL, effects, style } from '@/app/resources'
 import {Lora} from 'next/font/google';
 import { Inter } from 'next/font/google';
 import { Source_Code_Pro } from 'next/font/google';
-import { Playwrite_Ireland_Guides} from 'next/font/google'
+import { Playwrite_USA_Modern} from 'next/font/google'
 
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-intl/server';
@@ -56,7 +56,7 @@ const primary = Lora({
 	display: 'swap',
 })
 
-const secondary = Playwrite_Ireland_Guides({
+const secondary = Playwrite_USA_Modern({
 	variable: '--font-secondary',
 	subsets: ['latin'],
 	display: 'swap',
