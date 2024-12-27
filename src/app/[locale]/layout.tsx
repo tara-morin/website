@@ -8,7 +8,6 @@ import { baseURL, effects, style } from '@/app/resources'
 
 import { Inter } from 'next/font/google';
 import { Source_Code_Pro } from 'next/font/google';
-import{ localFont } from "next/font/local";
 
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-intl/server';
@@ -50,24 +49,11 @@ export async function generateMetadata(
 	}
 };
 
-const damascus = localFont({
-    src: [
-        {
-            path: '/fonts/Damascus.ttf',
-            weight: '400',
-            style: 'normal',
-        },
-    ],
-    variable: '--font-primary',
-    display: 'swap',
-});
-
-
-// const primary = Damascus({
-// 	variable: '--font-primary',
-// 	subsets: ['latin'],
-// 	display: 'swap',
-// })
+const primary = Inter({
+	variable: '--font-primary',
+	subsets: ['latin'],
+	display: 'swap',
+})
 
 type FontConfig = {
     variable: string;
