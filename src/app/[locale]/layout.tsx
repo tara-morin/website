@@ -56,12 +56,12 @@ const primary = Lora({
 	display: 'swap',
 })
 
-const secondary = Italianno({
-	variable: '--font-secondary',
-	subsets: ['latin'],
-	weight: '400',
-	display: 'swap',
-})
+// const secondary = Italianno({
+// 	variable: '--font-secondary',
+// 	subsets: ['latin'],
+// 	weight: '400',
+// 	display: 'swap',
+// })
 
 type FontConfig = {
     variable: string;
@@ -71,6 +71,7 @@ type FontConfig = {
 	Replace with code for secondary and tertiary fonts
 	from https://once-ui.com/customize
 */
+const secondary: FontConfig | undefined= undefined;
 const tertiary: FontConfig | undefined = undefined;
 /*
 */
