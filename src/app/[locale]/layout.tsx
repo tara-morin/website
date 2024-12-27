@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import { Footer, Header, RouteGuard } from "@/components";
 import { baseURL, effects, style } from '@/app/resources'
-
+import {Lora} from 'next/font/google';
 import { Inter } from 'next/font/google';
 import { Source_Code_Pro } from 'next/font/google';
 
@@ -49,7 +49,7 @@ export async function generateMetadata(
 	}
 };
 
-const primary = Inter({
+const primary = Lora({
 	variable: '--font-primary',
 	subsets: ['latin'],
 	display: 'swap',
