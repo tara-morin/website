@@ -59,6 +59,7 @@ const primary = Lora({
 const secondary = Italianno({
 	variable: '--font-secondary',
 	subsets: ['latin'],
+	weight: '400',
 	display: 'swap',
 })
 
