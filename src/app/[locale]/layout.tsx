@@ -8,6 +8,7 @@ import { baseURL, effects, style } from '@/app/resources'
 import {Lora} from 'next/font/google';
 import { Inter } from 'next/font/google';
 import { Source_Code_Pro } from 'next/font/google';
+import { Playwrite_Ireland_Guides} from 'next/font/google'
 
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-intl/server';
@@ -55,6 +56,12 @@ const primary = Lora({
 	display: 'swap',
 })
 
+const secondary = Playwrite_Ireland_Guides({
+	variable: '--font-secondary',
+	subsets: ['latin'],
+	display: 'swap',
+})
+
 type FontConfig = {
     variable: string;
 };
@@ -63,7 +70,6 @@ type FontConfig = {
 	Replace with code for secondary and tertiary fonts
 	from https://once-ui.com/customize
 */
-const secondary: FontConfig | undefined = undefined;
 const tertiary: FontConfig | undefined = undefined;
 /*
 */
