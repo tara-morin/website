@@ -6,7 +6,7 @@ const person = {
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Tara Morin\'s Portfolio',
+    role:      ' ',
     avatar:    '/images/avatar.jpg',
     location:  'Virginia, USA',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
     languages: []  // optional: Leave the array empty if you don't want to display languages
@@ -47,8 +47,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    headline: <>Tara Morin's Portfolio</>,
+    subline: <>Welcome to my website! My name is Tara, and I am an aspiring software designer located in Northern Virginia. </>
 }
 
 const about = {
@@ -69,7 +69,7 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Welcome to my website! My name is Tara Morin, I am an aspiring software designer located in Northern Virginia.</>
+        description: <>! </>
     },
     work: {
         display: true, // set to false to hide this section
@@ -109,12 +109,8 @@ const about = {
         title: 'Studies',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
-            },
-            {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'University of Virginia',
+                description: <>Double major in Computer Science and Cognitive Science.</>,
             }
         ]
     },
