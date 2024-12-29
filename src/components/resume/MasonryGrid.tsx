@@ -2,7 +2,7 @@
 
 import Masonry from 'react-masonry-css';
 import { SmartImage } from "@/once-ui/components";
-import styles from "./Gallery.module.scss";
+import styles from "./resume.module.scss";
 import { useTranslations } from 'next-intl';
 import { renderContent } from '@/app/resources';
 
@@ -15,14 +15,14 @@ export default function MasonryGrid() {
     };
 
     const t = useTranslations();
-    const { gallery } = renderContent(t);
+    const { resume } = renderContent(t);
 
     return (
         <Masonry
             breakpointCols={breakpointColumnsObj}
             className={styles.masonryGrid}
             columnClassName={styles.masonryGridColumn}>
-            {gallery.images.map((image, index) => (
+            {resume.images.map((image, index) => (
                 <SmartImage
                     key={index}
                     radius="m"
