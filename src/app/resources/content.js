@@ -170,9 +170,9 @@ const work = {
     // All projects will be listed on the /home and /work routes
 }
 
-const gallery = {
-    label: 'Gallery',
-    title: 'My photo gallery',
+const resume = {
+    label: 'Resume',
+    title: 'My resume',
     description: `A photo collection by ${person.name}`,
     // Images from https://pexels.com
     images: [
@@ -249,4 +249,4 @@ const gallery = {
     ]
 }
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, resume };
