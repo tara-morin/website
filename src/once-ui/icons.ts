@@ -30,7 +30,7 @@ import {
 } from "react-icons/pi";
 
 import { IoDocumentTextOutline } from "react-icons/io5";
-
+import { HiLightBulb } from "react-icons/hi";
 import {
 	FaDiscord,
 	FaGithub,
@@ -68,5 +68,6 @@ export const iconLibrary: Record<string, IconType> = {
 	linkedin: FaLinkedin,
 	x: FaXTwitter,
 	clipboard: HiClipboard,
-	gears: FaGears
+	gears: FaGears,
+	lightbulb: HiLightBulb
 };
