@@ -29,6 +29,8 @@ import {
 	PiImageDuotone
 } from "react-icons/pi";
 
+import { IoDocumentTextOutline } from "react-icons/io5";
+
 import {
 	FaDiscord,
 	FaGithub,
@@ -44,6 +46,7 @@ export const iconLibrary: Record<string, IconType> = {
 	refresh: HiOutlineArrowPath,
 	arrowUpRight: HiArrowUpRight,
 	check: HiCheck,
+	resume: IoDocumentTextOutline,
 	helpCircle: HiMiniQuestionMarkCircle,
 	infoCircle: HiInformationCircle,
 	warningTriangle: HiExclamationTriangle,
