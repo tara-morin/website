@@ -167,10 +167,10 @@ const createI18nContent = (t) => {
         // All projects will be listed on the /home and /work routes
     }
 
-    const gallery = {
-        label: t("gallery.label"),
-        title: t("gallery.title"),
-        description: t("gallery.description", {name: person.name}),
+    const resume = {
+        label: t("resume.label"),
+        title: t("resume.title"),
+        description: t("resume.description", {name: person.name}),
         // Images from https://pexels.com
         images: [
             {
@@ -253,7 +253,7 @@ const createI18nContent = (t) => {
         about,
         blog,
         work,
-        gallery
+        resume
     }
 };
 

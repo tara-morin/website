@@ -1,19 +1,18 @@
-import { getPosts } from '@/app/utils/utils';
-import { Flex } from '@/once-ui/components';
-import { Projects } from '@/components/work/Projects';
-import { baseURL, renderContent } from '@/app/resources';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
-import { useTranslations } from 'next-intl';
+import { Flex } from "@/once-ui/components";
+import MasonryGrid from "@/components/gallery/MasonryGrid";
+import { baseURL, renderContent } from "@/app/resources";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
 export async function generateMetadata(
-    {params: {locale}}: { params: { locale: string }}
+	{params: {locale}}: { params: { locale: string }}
 ) {
 
-    const t = await getTranslations();
-    const { work } = renderContent(t);
+	const t = await getTranslations();
+	const { resume } = renderContent(t);
 
-	const title = work.title;
-	const description = work.description;
+	const title = resume.title;
+	const description = resume.description;
 	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
 	return {
@@ -23,7 +22,7 @@ export async function generateMetadata(
 			title,
 			description,
 			type: 'website',
-			url: `https://${baseURL}/${locale}/work/`,
+			url: `https://${baseURL}/${locale}/resume`,
 			images: [
 				{
 					url: ogImage,
@@ -40,45 +39,41 @@ export async function generateMetadata(
 	};
 }
 
-export default function Work(
-    { params: {locale}}: { params: { locale: string }}
+export default function Resume(
+	{ params: {locale}}: { params: { locale: string }}
 ) {
-    unstable_setRequestLocale(locale);
-    let allProjects = getPosts(['src', 'app', '[locale]', 'work', 'projects', locale]);
-
-    const t = useTranslations();
-    const { person, work } = renderContent(t);
-
+	unstable_setRequestLocale(locale);
+	const t = useTranslations();
+	const { resume, person } = renderContent(t);
     return (
-        <Flex
-			fillWidth maxWidth="m"
-			direction="column">
+        <Flex fillWidth>
             <script
-                type="application/ld+json"
-                suppressHydrationWarning
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        '@context': 'https://schema.org',
-                        '@type': 'CollectionPage',
-                        headline: work.title,
-                        description: work.description,
-                        url: `https://${baseURL}/projects`,
-                        image: `${baseURL}/og?title=Design%20Projects`,
-                        author: {
-                            '@type': 'Person',
-                            name: person.name,
-                        },
-                        hasPart: allProjects.map(project => ({
-                            '@type': 'CreativeWork',
-                            headline: project.metadata.title,
-                            description: project.metadata.summary,
-                            url: `https://${baseURL}/projects/${project.slug}`,
-                            image: `${baseURL}/${project.metadata.image}`,
+				type="application/ld+json"
+				suppressHydrationWarning
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'ImageGallery',
+						name: resume.title,
+						description: resume.description,
+						url: `https://${baseURL}/resume`,
+						image: gallery.images.map((image) => ({
+                            '@type': 'ImageObject',
+                            url: `${baseURL}${image.src}`,
+                            description: image.alt,
                         })),
-                    }),
-                }}
-            />
-            <Projects locale={locale}/>
+						author: {
+							'@type': 'Person',
+							name: person.name,
+                            image: {
+								'@type': 'ImageObject',
+								url: `${baseURL}${person.avatar}`,
+							},
+						},
+					}),
+				}}
+			/>
+            <MasonryGrid/>
         </Flex>
     );
 }
