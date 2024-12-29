@@ -1,5 +1,5 @@
 import { Flex } from "@/once-ui/components";
-import MasonryGrid from "@/components/gallery/MasonryGrid";
+import MasonryGrid from "@/components/resume/MasonryGrid";
 import { baseURL, renderContent } from "@/app/resources";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
