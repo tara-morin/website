@@ -57,7 +57,7 @@ export default function Resume(
 						name: resume.title,
 						description: resume.description,
 						url: `https://${baseURL}/resume`,
-						image: gallery.images.map((image) => ({
+						image: resume.images.map((image) => ({
                             '@type': 'ImageObject',
                             url: `${baseURL}${image.src}`,
                             description: image.alt,
