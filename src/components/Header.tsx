@@ -127,7 +127,7 @@ export const Header = () => {
                             )}
                             { routes['/blog'] && (
                                 <ToggleButton
-                                    prefixIcon="book"
+                                    prefixIcon="gears"
                                     href={`/${params?.locale}/blog`}
                                     selected={pathname.startsWith('/blog')}>
                                     <Flex paddingX="2" hide="s">{blog.label}</Flex>
