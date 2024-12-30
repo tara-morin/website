@@ -84,8 +84,8 @@ export default async function Resume() {
         Software Development, Machine Learning, Software Development Essentials
       </p>
       <p>
-        <strong>UVA in Greece Creative Interaction Design Program</strong>, UX
-        Researcher and Designer (May-June 2024)
+        <strong>UVA in Greece Creative Interaction Design Program</strong>, <i>UX
+        Researcher and Designer</i> (May-June 2024)
       </p>
       <ul style={{ marginLeft: "20px" }}>
         <li>
@@ -109,7 +109,7 @@ export default async function Resume() {
         Work Experience
       </h2>
       <p>
-        <strong>The Players Company</strong>, UX Design Intern
+        <strong>The Players Company</strong>, <i>UX Design Intern</i>
         (August-December 2024)
       </p>
       <ul style={{ marginLeft: "20px" }}>
@@ -121,8 +121,8 @@ export default async function Resume() {
         </li>
       </ul>
       <p>
-        <strong>University of Virginia</strong>, Teaching Assistant- Advanced
-        Data Structures and Algorithms (Spring 2024-Present)
+        <strong>University of Virginia</strong>, <i>Teaching Assistant- Advanced
+        Data Structures and Algorithms</i> (Spring 2024-Present)
       </p>
       <ul style={{ marginLeft: "20px" }}>
         <li>Provided office hours for 7 hours weekly for a class of over 400 students</li>
@@ -131,7 +131,7 @@ export default async function Resume() {
         <li>Tutored on algorithms such as BFS, DFS, dynamic programming, and greedy algorithms</li>
       </ul>
       <p>
-        <strong>Wattbuild</strong>, User Research/Software Design Intern
+        <strong>Wattbuild</strong>, <i>User Research/Software Design Intern</i>
         (June-August 2024)
       </p>
       <ul style={{ marginLeft: "20px" }}>
@@ -153,7 +153,7 @@ export default async function Resume() {
         Related Experience
       </h2>
       <p>
-        <strong>Jaswal Lab</strong>, Research Assistant (Fall 2022-Spring 2024)
+        <strong>Jaswal Lab</strong>, <i>Research Assistant</i> (Fall 2022-Spring 2024)
       </p>
       <ul style={{ marginLeft: "20px" }}>
         <li>
@@ -166,7 +166,7 @@ export default async function Resume() {
         </li>
       </ul>
       <p>
-        <strong>Lean on Me</strong>, Executive Marketing Chair
+        <strong>Lean on Me</strong>, <i>Executive Marketing Chair</i>
         (Spring 2023-Spring 2024)
       </p>
       <ul style={{ marginLeft: "20px" }}>
@@ -175,7 +175,7 @@ export default async function Resume() {
         <li>Planned events with the executive board</li>
       </ul>
       <p>
-        <strong>Virginia Women’s Chorus</strong>, Librarian (January-December
+        <strong>Virginia Women’s Chorus</strong>, <i>Librarian</i> (January-December
         2022)
       </p>
       <ul style={{ marginLeft: "20px" }}>
