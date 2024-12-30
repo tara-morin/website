@@ -14,7 +14,7 @@ export default function Resume() {
           style={{
             padding: "1rem 2rem",
             backgroundColor: "#0070f3",
-            color: "#fff",
+            color: "#a3fcff",
             borderRadius: "5px",
             textDecoration: "none",
             fontWeight: "bold",
