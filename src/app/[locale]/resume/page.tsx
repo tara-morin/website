@@ -46,6 +46,9 @@ export default function Resume(
 	const t = useTranslations();
 	const { resume, person } = renderContent(t);
     return (
+		<Flex>
+			hello!
+		</Flex>
         // <Flex fillWidth>
         //     <script
 		// 		type="application/ld+json"
