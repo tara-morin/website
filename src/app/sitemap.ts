@@ -14,8 +14,8 @@ export default async function sitemap() {
     );
 
     let works = locales.flatMap((locale) => 
-        getPosts(['src', 'app', '[locale]', 'work', 'projects', locale]).map((post) => ({
-            url: `${baseURL}${includeLocalePrefix ? `/${locale}` : ''}/work/${post.slug}`,
+        getPosts(['src', 'app', '[locale]', 'ux', 'projects', locale]).map((post) => ({
+            url: `${baseURL}${includeLocalePrefix ? `/${locale}` : ''}/ux/${post.slug}`,
             lastModified: post.metadata.publishedAt,
         }))
     );

@@ -68,7 +68,7 @@ export const Header = () => {
     }
 
     const t = useTranslations();
-    const { person, home, about, machine_learning, work, resume } = renderContent(t);
+    const { person, home, about, machine_learning, ux, resume } = renderContent(t);
 
     return (
         <>
@@ -117,12 +117,12 @@ export const Header = () => {
                                     <Flex paddingX="2" hide="s">{about.label}</Flex>
                                 </ToggleButton>
                             )}
-                            { routes['/work'] && (
+                            { routes['/ux'] && (
                                 <ToggleButton
                                     prefixIcon="lightbulb"
-                                    href={`/${params?.locale}/work`}
-                                    selected={pathname.startsWith('/work')}>
-                                    <Flex paddingX="2" hide="s">{work.label}</Flex>
+                                    href={`/${params?.locale}/ux`}
+                                    selected={pathname.startsWith('/ux')}>
+                                    <Flex paddingX="2" hide="s">{ux.label}</Flex>
                                 </ToggleButton>
                             )}
                             { routes['/machine_learning'] && (

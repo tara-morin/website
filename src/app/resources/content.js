@@ -162,8 +162,8 @@ const machine_learning = {
     // All posts will be listed on the /blog route
 }
 
-const work = {
-    label: 'Work',
+const ux = {
+    label: 'UX Design',
     title: 'My projects',
     description: `Design and dev projects by ${person.name}`
     // Create new project pages by adding a new .mdx file to app/blog/posts
@@ -249,4 +249,4 @@ const resume = {
     ]
 }
 
-export { person, social, newsletter, home, about, machine_learning, work, resume };
+export { person, social, newsletter, home, about, machine_learning, ux, resume };

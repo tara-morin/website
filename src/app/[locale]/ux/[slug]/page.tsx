@@ -24,7 +24,7 @@ export async function generateStaticParams(): Promise<{ slug: string; locale: st
 
     // Fetch posts for each locale
     for (const locale of locales) {
-        const posts = getPosts(['src', 'app', '[locale]', 'work', 'projects', locale]);
+        const posts = getPosts(['src', 'app', '[locale]', 'ux', 'projects', locale]);
         allPosts.push(...posts.map(post => ({
             slug: post.slug,
             locale: locale,
@@ -35,7 +35,7 @@ export async function generateStaticParams(): Promise<{ slug: string; locale: st
 }
 
 export function generateMetadata({ params: { slug, locale } }: WorkParams) {
-	let post = getPosts(['src', 'app', '[locale]', 'work', 'projects', locale]).find((post) => post.slug === slug)
+	let post = getPosts(['src', 'app', '[locale]', 'ux', 'projects', locale]).find((post) => post.slug === slug)
 	
 	if (!post) {
 		return
@@ -63,7 +63,7 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 			description,
 			type: 'article',
 			publishedTime,
-			url: `https://${baseURL}/${locale}/work/${post.slug}`,
+			url: `https://${baseURL}/${locale}/ux/${post.slug}`,
 			images: [
 				{
 					url: ogImage,
@@ -81,7 +81,7 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 
 export default function Project({ params }: WorkParams) {
 	unstable_setRequestLocale(params.locale);
-	let post = getPosts(['src', 'app', '[locale]', 'work', 'projects', params.locale]).find((post) => post.slug === params.slug)
+	let post = getPosts(['src', 'app', '[locale]', 'ux', 'projects', params.locale]).find((post) => post.slug === params.slug)
 
 	if (!post) {
 		notFound()
@@ -113,7 +113,7 @@ export default function Project({ params }: WorkParams) {
 						image: post.metadata.image
 							? `https://${baseURL}${post.metadata.image}`
 							: `https://${baseURL}/og?title=${post.metadata.title}`,
-							url: `https://${baseURL}/${params.locale}/work/${post.slug}`,
+							url: `https://${baseURL}/${params.locale}/ux/${post.slug}`,
 						author: {
 							'@type': 'Person',
 							name: person.name,
@@ -125,7 +125,7 @@ export default function Project({ params }: WorkParams) {
 				fillWidth maxWidth="xs" gap="16"
 				direction="column">
 				<Button
-					href={`/${params.locale}/work`}
+					href={`/${params.locale}/ux`}
 					variant="tertiary"
 					size="s"
 					prefixIcon="chevronLeft">

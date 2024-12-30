@@ -159,10 +159,10 @@ const createI18nContent = (t) => {
         // All posts will be listed on the /blog route
     }
 
-    const work = {
-        label: t("work.label"),
-        title: t("work.title"),
-        description: t("work.description", {name: person.name})
+    const ux = {
+        label: t("ux.label"),
+        title: t("ux.title"),
+        description: t("ux.description", {name: person.name})
         // Create new project pages by adding a new .mdx file to app/blog/posts
         // All projects will be listed on the /home and /work routes
     }
@@ -252,7 +252,7 @@ const createI18nContent = (t) => {
         home,
         about,
         machine_learning,
-        work,
+        ux,
         resume
     }
 };

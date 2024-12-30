@@ -1,6 +1,6 @@
 import { getPosts } from '@/app/utils/utils';
 import { Flex } from '@/once-ui/components';
-import { Projects } from '@/components/work/Projects';
+import { Projects } from '@/components/ux/Projects';
 import { baseURL, renderContent } from '@/app/resources';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
@@ -10,10 +10,10 @@ export async function generateMetadata(
 ) {
 
     const t = await getTranslations();
-    const { work } = renderContent(t);
+    const { ux } = renderContent(t);
 
-	const title = work.title;
-	const description = work.description;
+	const title = ux.title;
+	const description = ux.description;
 	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
 	return {
@@ -23,7 +23,7 @@ export async function generateMetadata(
 			title,
 			description,
 			type: 'website',
-			url: `https://${baseURL}/${locale}/work/`,
+			url: `https://${baseURL}/${locale}/ux/`,
 			images: [
 				{
 					url: ogImage,
@@ -40,14 +40,14 @@ export async function generateMetadata(
 	};
 }
 
-export default function Work(
+export default function UX(
     { params: {locale}}: { params: { locale: string }}
 ) {
     unstable_setRequestLocale(locale);
-    let allProjects = getPosts(['src', 'app', '[locale]', 'work', 'projects', locale]);
+    let allProjects = getPosts(['src', 'app', '[locale]', 'ux', 'projects', locale]);
 
     const t = useTranslations();
-    const { person, work } = renderContent(t);
+    const { person, ux } = renderContent(t);
 
     return (
         <Flex
@@ -60,8 +60,8 @@ export default function Work(
                     __html: JSON.stringify({
                         '@context': 'https://schema.org',
                         '@type': 'CollectionPage',
-                        headline: work.title,
-                        description: work.description,
+                        headline: ux.title,
+                        description: ux.description,
                         url: `https://${baseURL}/projects`,
                         image: `${baseURL}/og?title=Design%20Projects`,
                         author: {
