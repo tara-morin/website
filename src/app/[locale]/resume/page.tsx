@@ -19,7 +19,7 @@ export default async function Resume() {
 
     return (
         <Flex>
-          <Flex>
+          <Flex maxWidth="10" maxHeight="10">
           <a
                 href="/TMresume.pdf"
                 download="TMresume.pdf"
@@ -46,7 +46,7 @@ export default async function Resume() {
         maxWidth: "800px",
         margin: "auto",
         padding: "20px",
-        fontFamily: "Arial, sans-serif",
+        fontFamily: "Calibri",
         lineHeight: 1.6,
         color: "#333",
       }}
