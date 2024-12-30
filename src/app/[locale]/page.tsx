@@ -5,7 +5,7 @@ import { Projects } from '@/components/work/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
 import { Mailchimp } from '@/components';
-import { Posts } from '@/components/blog/Posts';
+import { Posts } from '@/components/machine_learning/Posts';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
@@ -127,7 +127,7 @@ export default function Home(
 			<RevealFx translateY="16" delay={0.6}>
 				<Projects range={[1,1]} locale={locale}/>
 			</RevealFx>
-			{routes['/blog'] && (
+			{routes['/machine_learning'] && (
 				<Flex
 					fillWidth gap="24"
 					mobileDirection="column">
