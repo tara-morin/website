@@ -19,6 +19,7 @@ export default async function Resume() {
 
     return (
         <Flex fillWidth>
+            <Button>
             <a
                 href="/TMresume.pdf"
                 download="TMresume.pdf"
@@ -32,8 +33,9 @@ export default async function Resume() {
                     fontSize: "1.2rem",
                 }}
             >
-                Download my Resume
             </a>
+            Download my Resume
+            </Button>
             <div
                 dangerouslySetInnerHTML={{ __html: markdownHtml }}
                 style={{ maxWidth: "800px", margin: "auto", padding: "2rem" }}
