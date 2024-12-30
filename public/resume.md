@@ -12,7 +12,7 @@ Relevant Coursework: Data Structures and Algorithms 1 & 2, Computer Systems and 
 * Selected for program along with 11 other students
 
 **WORK EXPERIENCE**  
-**The Players Company,** *UX Design Intern*                                                                                                           August 2024-present
+**The Players Company,** *UX Design Intern*                                                                                                        August-December 2024
 
 * Designs web interface of financial literacy program  
 * Evaluates user experience in navigating company platforms  
@@ -25,11 +25,11 @@ Relevant Coursework: Data Structures and Algorithms 1 & 2, Computer Systems and 
 * Grades exams with attention to detail and scrutiny  
 * Tutors on algorithms such as BFS, DFS, dynamic programming, and greedy algorithms
 
-**Gap Inc,** *Sales Associate*                                                                                                                                  June 2022-October 2024
+**Wattbuild,** *User Research/ Software Design Intern*                                                                                               June-August 2024
 
-* Assisted customers in purchasing items and in locating items on sales floor  
-* Sold/pitched Gap credit card program to customers  
-*  Stocked and replenished inventory using digital software
+* Researched product domain and reports on competing social media in solar power  
+* Graphed and maintained database on the most common wattages of 30 household appliances   
+* Designed community forum for solar power users to share their solar systems and troubleshoot issues 
 
 **RELATED EXPERIENCE**  
 **Jaswal Lab,** *Research Assistant*                                                                                                                          Fall 2022- Spring 2024
