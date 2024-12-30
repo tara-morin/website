@@ -1,28 +1,84 @@
-import { promises as fs } from "fs";
-import path from "path";
-import { Flex } from "@/once-ui/components";
-import {remark} from "/vercel/path0/node_modules/remark/index";
-import html from "remark-html";
+import { getPosts } from '@/app/utils/utils';
+import { Flex } from '@/once-ui/components';
+import { Projects } from '@/components/ux/Projects';
+import { baseURL, renderContent } from '@/app/resources';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
 
-async function getMarkdownContent() {
-    // Read the markdown file
-    const filePath = path.join(process.cwd(), "public", "resume.md");
-    const fileContents = await fs.readFile(filePath, "utf8");
+export async function generateMetadata(
+    {params: {locale}}: { params: { locale: string }}
+) {
 
-    // Parse the markdown into HTML
-    const parsedMarkdown = await remark().use(html).process(fileContents);
-    return parsedMarkdown.toString();
+    const t = await getTranslations();
+    const { ux } = renderContent(t);
+
+	const title = ux.title;
+	const description = ux.description;
+	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+
+	return {
+		title,
+		description,
+		openGraph: {
+			title,
+			description,
+			type: 'website',
+			url: `https://${baseURL}/${locale}/ux/`,
+			images: [
+				{
+					url: ogImage,
+					alt: title,
+				},
+			],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title,
+			description,
+			images: [ogImage],
+		},
+	};
 }
 
-export default async function Resume() {
-    const markdownHtml = await getMarkdownContent();
+export default function UX(
+    { params: {locale}}: { params: { locale: string }}
+) {
+    unstable_setRequestLocale(locale);
+    let allProjects = getPosts(['src', 'app', '[locale]', 'ux', 'projects', locale]);
+
+    const t = useTranslations();
+    const { person, ux } = renderContent(t);
 
     return (
-        <Flex fillWidth>
-            <div
-                dangerouslySetInnerHTML={{ __html: markdownHtml }}
-                style={{ maxWidth: "800px", margin: "auto", padding: "2rem" }}
+        <Flex
+			fillWidth maxWidth="m"
+			direction="column">
+            <script
+                type="application/ld+json"
+                suppressHydrationWarning
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'CollectionPage',
+                        headline: ux.title,
+                        description: ux.description,
+                        url: `https://${baseURL}/projects`,
+                        image: `${baseURL}/og?title=Design%20Projects`,
+                        author: {
+                            '@type': 'Person',
+                            name: person.name,
+                        },
+                        hasPart: allProjects.map(project => ({
+                            '@type': 'CreativeWork',
+                            headline: project.metadata.title,
+                            description: project.metadata.summary,
+                            url: `https://${baseURL}/projects/${project.slug}`,
+                            image: `${baseURL}/${project.metadata.image}`,
+                        })),
+                    }),
+                }}
             />
+            <Projects locale={locale}/>
         </Flex>
     );
 }

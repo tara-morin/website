@@ -1,82 +1,28 @@
+import { promises as fs } from "fs";
+import path from "path";
 import { Flex } from "@/once-ui/components";
-import MasonryGrid from "@/components/resume/MasonryGrid";
-import { baseURL, renderContent } from "@/app/resources";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import {remark} from "/vercel/path0/node_modules/remark/index";
+import html from "remark-html";
 
-export async function generateMetadata(
-	{params: {locale}}: { params: { locale: string }}
-) {
+async function getMarkdownContent() {
+    // Read the markdown file
+    const filePath = path.join(process.cwd(), "public", "resume.md");
+    const fileContents = await fs.readFile(filePath, "utf8");
 
-	const t = await getTranslations();
-	const { resume } = renderContent(t);
-
-	const title = resume.title;
-	const description = resume.description;
-	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
-
-	return {
-		title,
-		description,
-		openGraph: {
-			title,
-			description,
-			type: 'website',
-			url: `https://${baseURL}/${locale}/resume`,
-			images: [
-				{
-					url: ogImage,
-					alt: title,
-				},
-			],
-		},
-		twitter: {
-			card: 'summary_large_image',
-			title,
-			description,
-			images: [ogImage],
-		},
-	};
+    // Parse the markdown into HTML
+    const parsedMarkdown = await remark().use(html).process(fileContents);
+    return parsedMarkdown.toString();
 }
 
-export default function Resume(
-	{ params: {locale}}: { params: { locale: string }}
-) {
-	unstable_setRequestLocale(locale);
-	const t = useTranslations();
-	const { resume, person } = renderContent(t);
+export default async function Resume() {
+    const markdownHtml = await getMarkdownContent();
+
     return (
-		// <Flex>
-		// 	hello!
-		// </Flex>
         <Flex fillWidth>
-            <script
-				type="application/ld+json"
-				suppressHydrationWarning
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'ImageGallery',
-						name: resume.title,
-						description: resume.description,
-						url: `https://${baseURL}/resume`,
-						image: resume.images.map((image) => ({
-                            '@type': 'ImageObject',
-                            url: `${baseURL}${image.src}`,
-                            description: image.alt,
-                        })),
-						author: {
-							'@type': 'Person',
-							name: person.name,
-                            image: {
-								'@type': 'ImageObject',
-								url: `${baseURL}${person.avatar}`,
-							},
-						},
-					}),
-				}}
-			/>
-            <MasonryGrid/>
+            <div
+                dangerouslySetInnerHTML={{ __html: markdownHtml }}
+                style={{ maxWidth: "800px", margin: "auto", padding: "2rem" }}
+            />
         </Flex>
     );
 }
