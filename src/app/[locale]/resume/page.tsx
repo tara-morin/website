@@ -18,8 +18,9 @@ export default async function Resume() {
     // const markdownHtml = await getMarkdownContent();
 
     return (
-        <Flex fillWidth>
-            <Button
+        <Flex>
+          <Flex>
+          <a
                 href="/TMresume.pdf"
                 download="TMresume.pdf"
                 style={{
@@ -33,7 +34,9 @@ export default async function Resume() {
                 }}
             >
                 Download my Resume
-            </Button>
+            </a>
+          </Flex>
+          <Flex fillWidth>
             {/* <div
                 dangerouslySetInnerHTML={{ __html: markdownHtml }}
                 style={{ maxWidth: "800px", margin: "auto", padding: "2rem" }}
@@ -204,7 +207,7 @@ export default async function Resume() {
         </li>
       </ul>
     </div>
-
+    </Flex>  
         </Flex>
         
     );
