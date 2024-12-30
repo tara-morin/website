@@ -19,7 +19,7 @@ export default function Post({ post, thumbnail }: PostProps) {
                 height: 'fit-content',
             }}
             key={post.slug}
-            href={`/blog/${post.slug}`}>
+            href={`/machine_learning/${post.slug}`}>
             <Flex
                 position="relative"
                 mobileDirection="column"

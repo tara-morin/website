@@ -154,8 +154,8 @@ const about = {
     }
 }
 
-const blog = {
-    label: 'Blog',
+const machine_learning = {
+    label: 'Machine Learning',
     title: 'Writing about design and tech...',
     description: `Read what ${person.name} has been up to recently`
     // Create new blog posts by adding a new .mdx file to app/blog/posts
@@ -249,4 +249,4 @@ const resume = {
     ]
 }
 
-export { person, social, newsletter, home, about, blog, work, resume };
+export { person, social, newsletter, home, about, machine_learning, work, resume };

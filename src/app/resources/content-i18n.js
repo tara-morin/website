@@ -151,10 +151,10 @@ const createI18nContent = (t) => {
         }
     }
 
-    const blog = {
-        label: t("blog.label"),
-        title: t("blog.title"),
-        description: t("blog.description", {name: person.name})
+    const machine_learning = {
+        label: t("machine_learning.label"),
+        title: t("machine_learning.title"),
+        description: t("machine_learning.description", {name: person.name})
         // Create new blog posts by adding a new .mdx file to app/blog/posts
         // All posts will be listed on the /blog route
     }
@@ -251,7 +251,7 @@ const createI18nContent = (t) => {
         newsletter,
         home,
         about,
-        blog,
+        machine_learning,
         work,
         resume
     }

@@ -13,7 +13,7 @@ const routes = {
     '/':        true,
     '/about':   true,
     '/work':    true,
-    '/blog':    true,
+    '/machine_learning':    true,
     '/resume': true,
 }
 

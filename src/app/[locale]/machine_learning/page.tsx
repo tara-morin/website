@@ -1,6 +1,6 @@
 import { Flex, Heading } from '@/once-ui/components';
 import { Mailchimp } from '@/components';
-import { Posts } from '@/components/blog/Posts';
+import { Posts } from '@/components/machine_learning/Posts';
 import { baseURL, renderContent } from '@/app/resources'
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
@@ -10,10 +10,10 @@ export async function generateMetadata(
 ) {
 
 	const t = await getTranslations();
-	const { blog } = renderContent(t);
+	const { machine_learning } = renderContent(t);
 
-	const title = blog.title;
-	const description = blog.description;
+	const title = machine_learning.title;
+	const description = machine_learning.description;
 	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
 	return {
@@ -23,7 +23,7 @@ export async function generateMetadata(
 			title,
 			description,
 			type: 'website',
-			url: `https://${baseURL}/${locale}/blog`,
+			url: `https://${baseURL}/${locale}/machine_learning`,
 			images: [
 				{
 					url: ogImage,
@@ -40,13 +40,13 @@ export async function generateMetadata(
 	};
 }
 
-export default function Blog(
+export default function machine_learning(
 	{ params: {locale}}: { params: { locale: string }}
 ) {
 	unstable_setRequestLocale(locale);
 
 	const t = useTranslations();
-	const { person, blog, newsletter } = renderContent(t);
+	const { person, machine_learning, newsletter } = renderContent(t);
     return (
         <Flex
 			fillWidth maxWidth="s"
@@ -57,11 +57,11 @@ export default function Blog(
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify({
 						'@context': 'https://schema.org',
-						'@type': 'Blog',
-						headline: blog.title,
-						description: blog.description,
-						url: `https://${baseURL}/blog`,
-						image: `${baseURL}/og?title=${encodeURIComponent(blog.title)}`,
+						'@type': 'Machine Learning',
+						headline: machine_learning.title,
+						description: machine_learning.description,
+						url: `https://${baseURL}/machine_learning`,
+						image: `${baseURL}/og?title=${encodeURIComponent(machine_learning.title)}`,
 						author: {
 							'@type': 'Person',
 							name: person.name,
@@ -76,7 +76,7 @@ export default function Blog(
             <Heading
                 marginBottom="l"
                 variant="display-strong-s">
-                {blog.title}
+                {machine_learning.title}
             </Heading>
 			<Flex
 				fillWidth flex={1} direction="column">

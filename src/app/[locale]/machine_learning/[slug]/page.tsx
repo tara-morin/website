@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 
     // Fetch posts for each locale
     for (const locale of locales) {
-        const posts = getPosts(['src', 'app', '[locale]', 'blog', 'posts', locale]);
+        const posts = getPosts(['src', 'app', '[locale]', 'machine_learning', 'posts', locale]);
         allPosts.push(...posts.map(post => ({
             slug: post.slug,
             locale: locale,
@@ -36,7 +36,7 @@ export async function generateStaticParams() {
 }
 
 export function generateMetadata({ params: { slug, locale } }: BlogParams) {
-	let post = getPosts(['src', 'app', '[locale]', 'blog', 'posts', locale]).find((post) => post.slug === slug)
+	let post = getPosts(['src', 'app', '[locale]', 'machine_learning', 'posts', locale]).find((post) => post.slug === slug)
 
 	if (!post) {
 		return
@@ -60,7 +60,7 @@ export function generateMetadata({ params: { slug, locale } }: BlogParams) {
 			description,
 			type: 'article',
 			publishedTime,
-			url: `https://${baseURL}/${locale}/blog/${post.slug}`,
+			url: `https://${baseURL}/${locale}/machine_learning/${post.slug}`,
 			images: [
 				{
 					url: ogImage,
@@ -76,9 +76,9 @@ export function generateMetadata({ params: { slug, locale } }: BlogParams) {
 	}
 }
 
-export default function Blog({ params }: BlogParams) {
+export default function machine_learning({ params }: BlogParams) {
 	unstable_setRequestLocale(params.locale);
-	let post = getPosts(['src', 'app', '[locale]', 'blog', 'posts', params.locale]).find((post) => post.slug === params.slug)
+	let post = getPosts(['src', 'app', '[locale]', 'machine_learning', 'posts', params.locale]).find((post) => post.slug === params.slug)
 
 	if (!post) {
 		notFound()
@@ -106,7 +106,7 @@ export default function Blog({ params }: BlogParams) {
 						image: post.metadata.image
 							? `https://${baseURL}${post.metadata.image}`
 							: `https://${baseURL}/og?title=${post.metadata.title}`,
-							url: `https://${baseURL}/${params.locale}/blog/${post.slug}`,
+							url: `https://${baseURL}/${params.locale}/machine_learning/${post.slug}`,
 						author: {
 							'@type': 'Person',
 							name: person.name,
@@ -115,7 +115,7 @@ export default function Blog({ params }: BlogParams) {
 				}}
 			/>
 			<Button
-				href={`/${params.locale}/blog`}
+				href={`/${params.locale}/machine_learning`}
 				variant="tertiary"
 				size="s"
 				prefixIcon="chevronLeft">
