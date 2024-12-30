@@ -1,8 +1,4 @@
-import { promises as fs } from "fs";
-import path from "path";
 import { Flex, Button } from "@/once-ui/components";
-import { remark } from "remark";
-import html from "remark-html";
 
 export default function Resume() {
   return (
@@ -13,8 +9,8 @@ export default function Resume() {
           download="TMresume.pdf"
           style={{
             padding: "1rem 2rem",
-            backgroundColor: "#0070f3",
-            color: "#a3fcff",
+            backgroundColor: "#a3fcff",
+            color: "#12007d",
             borderRadius: "5px",
             textDecoration: "none",
             fontWeight: "bold",
