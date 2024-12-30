@@ -20,7 +20,6 @@ export default async function Resume() {
     return (
         <Flex fillWidth>
             <Button
-                as="a"
                 href="/TMresume.pdf"
                 download="TMresume.pdf"
                 style={{
