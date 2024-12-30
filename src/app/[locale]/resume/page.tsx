@@ -32,12 +32,12 @@ export default async function Resume() {
                     fontSize: "1.2rem",
                 }}
             >
+                Download my Resume
             </a>
-            Download my Resume
-            <div
+            {/* <div
                 dangerouslySetInnerHTML={{ __html: markdownHtml }}
                 style={{ maxWidth: "800px", margin: "auto", padding: "2rem" }}
-            />
+            /> */}
         <div style="max-width: 800px; margin: auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
   <h1 style="font-size: 2rem; font-weight: bold; text-align: center;">Tara Morin</h1>
   <p style="text-align: center;">tmn7vs@virginia.edu | 304-620-6551 | Purcellville, Virginia</p>
