@@ -46,37 +46,37 @@ export default function Resume(
 	const t = useTranslations();
 	const { resume, person } = renderContent(t);
     return (
-		<Flex>
-			hello!
-		</Flex>
-        // <Flex fillWidth>
-        //     <script
-		// 		type="application/ld+json"
-		// 		suppressHydrationWarning
-		// 		dangerouslySetInnerHTML={{
-		// 			__html: JSON.stringify({
-		// 				'@context': 'https://schema.org',
-		// 				'@type': 'ImageGallery',
-		// 				name: resume.title,
-		// 				description: resume.description,
-		// 				url: `https://${baseURL}/resume`,
-		// 				image: resume.images.map((image) => ({
-        //                     '@type': 'ImageObject',
-        //                     url: `${baseURL}${image.src}`,
-        //                     description: image.alt,
-        //                 })),
-		// 				author: {
-		// 					'@type': 'Person',
-		// 					name: person.name,
-        //                     image: {
-		// 						'@type': 'ImageObject',
-		// 						url: `${baseURL}${person.avatar}`,
-		// 					},
-		// 				},
-		// 			}),
-		// 		}}
-		// 	/>
-        //     <MasonryGrid/>
-        // </Flex>
+		// <Flex>
+		// 	hello!
+		// </Flex>
+        <Flex fillWidth>
+            <script
+				type="application/ld+json"
+				suppressHydrationWarning
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						'@context': 'https://schema.org',
+						'@type': 'ImageGallery',
+						name: resume.title,
+						description: resume.description,
+						url: `https://${baseURL}/resume`,
+						image: resume.images.map((image) => ({
+                            '@type': 'ImageObject',
+                            url: `${baseURL}${image.src}`,
+                            description: image.alt,
+                        })),
+						author: {
+							'@type': 'Person',
+							name: person.name,
+                            image: {
+								'@type': 'ImageObject',
+								url: `${baseURL}${person.avatar}`,
+							},
+						},
+					}),
+				}}
+			/>
+            <MasonryGrid/>
+        </Flex>
     );
 }
