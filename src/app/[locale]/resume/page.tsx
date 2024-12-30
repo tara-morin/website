@@ -19,7 +19,9 @@ export default async function Resume() {
 
     return (
         <Flex>
-          <Flex maxWidth="10" maxHeight="10">
+          <Flex maxWidth=10
+          maxHeight=10
+          >
           <a
                 href="/TMresume.pdf"
                 download="TMresume.pdf"
