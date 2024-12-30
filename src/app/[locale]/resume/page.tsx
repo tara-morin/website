@@ -15,7 +15,7 @@ import html from "remark-html";
 // }
 
 export default async function Resume() {
-    const markdownHtml = await getMarkdownContent();
+    // const markdownHtml = await getMarkdownContent();
 
     return (
         <Flex fillWidth>
