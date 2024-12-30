@@ -28,7 +28,7 @@ export default function Resume() {
             padding: "20px",
             fontFamily: "Calibri",
             lineHeight: 1.6,
-            color: "#333",
+            color: "#12007d",
           }}
         >
           <h1
