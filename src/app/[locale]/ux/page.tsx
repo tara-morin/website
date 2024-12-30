@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { Flex } from "@/once-ui/components";
-import remark from "remark";
+import remark from "/vercel/path0/node_modules/remark/index";
 import html from "remark-html";
 
 async function getMarkdownContent() {
