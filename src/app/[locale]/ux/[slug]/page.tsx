@@ -96,7 +96,11 @@ export default function Project({ params }: WorkParams) {
 
 	return (
 		<Flex as="section"
-			fillWidth maxWidth="m"
+			fillWidth
+			style={{
+				overflow: 'visible', // Prevent cutting off content
+				justifyContent: 'center', // Center the image if necessary
+			}}
 			direction="column" alignItems="center"
 			gap="l">
 			<script
