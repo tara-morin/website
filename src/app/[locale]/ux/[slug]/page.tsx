@@ -128,6 +128,8 @@ export default function Project({ params }: WorkParams) {
 			<Flex
 				fillWidth
 				style={{
+					width: '100%',
+					height: 'auto',
 					overflow: 'visible', // Prevent cutting off content
 					justifyContent: 'center', // Center the image if necessary
 				}}
@@ -156,9 +158,14 @@ export default function Project({ params }: WorkParams) {
 					alt="image"
 					src={post.metadata.images[0]}/>
 			)}
-			<Flex style={{margin: 'auto'}}
+			<Flex style={{
+				width: '100%', // Allow container to take full width
+				height: 'auto', // Adjust height based on content
+				overflow: 'visible', // Prevent cutting off content
+				justifyContent: 'center',
+			}}
 				as="article"
-				maxWidth="xs" fillWidth
+				fillWidth
 				direction="column">
 				<Flex
 					gap="12" marginBottom="24"
