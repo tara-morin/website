@@ -122,7 +122,11 @@ export default function Project({ params }: WorkParams) {
 				}}
 			/>
 			<Flex
-				fillWidth maxWidth="xs" gap="16"
+				fillWidth
+				style={{
+					overflow: 'visible', // Prevent cutting off content
+					justifyContent: 'center', // Center the image if necessary
+				}}
 				direction="column">
 				<Button
 					href={`/${params.locale}/ux`}
