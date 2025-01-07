@@ -138,7 +138,11 @@ export default function Project({ params }: WorkParams) {
 			</Flex>
 			{post.metadata.images.length > 0 && (
 				<SmartImage
-					aspectRatio="30/ 30"
+				style={{
+					width: '100%', // Ensure the image scales to fit its container
+					height: 'auto', // Maintain the aspect ratio
+					objectFit: 'contain', // Adjust this based on your needs (e.g., 'cover', 'contain', or 'fill')
+				}}
 					radius="m"
 					alt="image"
 					src={post.metadata.images[0]}/>
