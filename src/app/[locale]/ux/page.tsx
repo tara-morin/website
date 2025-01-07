@@ -78,7 +78,15 @@ export default function UX(
                     }),
                 }}
             />
-            <Projects locale={locale}/>
+            <Projects locale={locale}
+            style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '1rem',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}
+            />
         </Flex>
     );
 }
