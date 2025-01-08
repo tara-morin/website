@@ -146,7 +146,34 @@ export default function Project({ params }: WorkParams) {
 					{post.metadata.title}
 				</Heading>
 			</Flex>
-			{post.metadata.images.length > 0 && (
+			<Flex
+    style={{
+        width: '550px', // Set the fixed width
+        height: '1200px', // Set the fixed height
+        overflow: 'hidden', // Ensure no content overflows the container
+        flexDirection: 'column', // Stack images vertically
+        alignItems: 'center', // Center images horizontally
+        justifyContent: 'start', // Align images at the top
+        padding: '16px', // Optional: Add some padding inside the container
+        border: '1px solid #ddd', // Optional: Add a border for clarity
+        backgroundColor: '#f9f9f9', // Optional: Add a background color
+    }}>
+    {post.metadata.images.map((image, index) => (
+        <SmartImage
+            key={index}
+            style={{
+                width: 'auto', // Let the width scale automatically
+                maxWidth: '100%', // Ensure it doesn't exceed the container width
+                height: 'auto', // Maintain aspect ratio
+                maxHeight: '100%', // Ensure it doesn't exceed the container height
+                objectFit: 'contain', // Ensure the full image is visible
+            }}
+            radius="m"
+            alt={`image-${index}`}
+            src={image} />
+    ))}
+</Flex>
+			{/* {post.metadata.images.length > 0 && (
 				<SmartImage
 				style={{
 					width: 'auto',
@@ -157,7 +184,7 @@ export default function Project({ params }: WorkParams) {
 					radius="m"
 					alt="image"
 					src={post.metadata.images[0]}/>
-			)}
+			)} */}
 			<Flex style={{
 				width: '100%', // Allow container to take full width
 				height: 'auto', // Adjust height based on content
