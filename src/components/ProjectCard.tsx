@@ -85,7 +85,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                             minWidth:50,
                             maxWidth:400,
                             minHeight:300,
-                            maxHeight:600,
+                            maxHeight:2400,
                         }}/>
                 </RevealFx>
             </Flex>}
