@@ -162,7 +162,7 @@ export default function Project({ params }: WorkParams) {
     {post.metadata.images.map((image, index) => (
         <SmartImage
             key={index}
-            aspectRatio="4/3"
+            aspectRatio="1/5"
   			radius="m"
   			objectFit="contain"
             alt={`image-${index}`}
