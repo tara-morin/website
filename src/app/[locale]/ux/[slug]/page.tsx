@@ -98,8 +98,9 @@ export default function Project({ params }: WorkParams) {
 		<Flex as="section"
 			fillWidth
 			style={{
-				overflow: 'visible', // Prevent cutting off content
-				justifyContent: 'center', // Center the image if necessary
+				width: '100%', // Ensure parent takes full width
+				height: 'auto', // Ensure height adapts to children
+				overflow: 'visible', // Prevent clipping
 			}}
 			direction="column" alignItems="center"
 			gap="l">
