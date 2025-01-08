@@ -82,7 +82,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                             ...(images.length > 1 && {
                                 cursor: 'pointer',
                             }),
-                            minWidth:100,
+                            minWidth:50,
                             maxWidth:400,
                             minHeight:300,
                             maxHeight:600,
