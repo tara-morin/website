@@ -169,6 +169,7 @@ export default function Project({ params }: WorkParams) {
                 maxHeight: '100%', // Ensure it doesn't exceed the container height
                 objectFit: 'contain', // Ensure the full image is visible
 				border: '2px solid red',
+				orientation: 'vertical',
             }}
             radius="m"
             alt={`image-${index}`}
