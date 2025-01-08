@@ -57,6 +57,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <Flex
             fillWidth gap="m"
             direction="column"
+            maxWidth={20}
+            maxHeight={80}
             >
             {images[activeIndex] && <Flex onClick={handleImageClick}>
                 <RevealFx
