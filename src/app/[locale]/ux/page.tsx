@@ -51,13 +51,7 @@ export default function UX(
 
     return (
         <Flex
-			fillWidth
-            style={{
-                width: '100%', // Allow container to take full width
-                height: 'auto', // Adjust height based on content
-                overflow: 'visible', // Prevent cutting off content
-                justifyContent: 'center',
-            }}
+			fillWidth maxWidth="m"
 			direction="column">
             <script
                 type="application/ld+json"
@@ -84,8 +78,7 @@ export default function UX(
                     }),
                 }}
             />
-            <Projects locale={locale}
-            />
+            <Projects locale={locale}/>
         </Flex>
     );
 }
