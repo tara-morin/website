@@ -57,6 +57,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <Flex
             fillWidth gap="m"
             direction="column"
+            alignItems="start"
+            justifyContent="center"
             >
             {images[activeIndex] && <Flex onClick={handleImageClick}>
                 <RevealFx
@@ -76,8 +78,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                             ...(images.length > 1 && {
                                 cursor: 'pointer',
                             }),
-                            maxWidth: "20",
-                            maxHeight: "80",
+                            maxWidth: "10",
+                            maxHeight: "40",
                         }}/>
                 </RevealFx>
             </Flex>}
