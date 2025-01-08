@@ -162,15 +162,9 @@ export default function Project({ params }: WorkParams) {
     {post.metadata.images.map((image, index) => (
         <SmartImage
             key={index}
-            style={{
-                width: 'auto', // Let the width scale automatically
-                maxWidth: '100%', // Ensure it doesn't exceed the container width
-                height: 'auto', // Maintain aspect ratio
-                maxHeight: '100%', // Ensure it doesn't exceed the container height
-                objectFit: 'contain', // Ensure the full image is visible
-				border: '2px solid red',
-				orientation: 'vertical',
-            }}
+            aspectRatio="4/3"
+  			radius="m"
+  			objectFit="contain"
             radius="m"
             alt={`image-${index}`}
             src={image} />
