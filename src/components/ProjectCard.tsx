@@ -56,7 +56,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     return (
         <Flex
             fillWidth gap="m"
-            direction="column">
+            direction="column"
+            style={{
+                alignItems: 'center', // Center the image in the vertical space
+                justifyContent: 'start', // Align content at the top
+            }}
+            >
             {images[activeIndex] && <Flex onClick={handleImageClick}>
                 <RevealFx
                     style={{width: '100%'}}
@@ -68,7 +73,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                         radius="l"
                         alt={title}
                         objectFit="contain"
-                        aspectRatio="3 / 4"
+                        aspectRatio="2 / 5"
                         src={images[activeIndex]}
                         style={{
                             border: '1px solid var(--neutral-alpha-weak)',
