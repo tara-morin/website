@@ -165,7 +165,6 @@ export default function Project({ params }: WorkParams) {
             aspectRatio="4/3"
   			radius="m"
   			objectFit="contain"
-            radius="m"
             alt={`image-${index}`}
             src={image} />
     ))}
