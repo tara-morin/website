@@ -148,7 +148,7 @@ export default function Project({ params }: WorkParams) {
 			</Flex>
 			{post.metadata.images.length > 0 && (
 				<SmartImage
-				// aspectRatio="422/740"
+				aspectRatio="422/740"
 				style={{
 					width: '100%', // Ensure the image scales to fit its container
 					height: 'auto', // Maintain the aspect ratio
