@@ -78,8 +78,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                             ...(images.length > 1 && {
                                 cursor: 'pointer',
                             }),
-                            maxWidth: "10",
-                            maxHeight: "40",
                         }}/>
                 </RevealFx>
             </Flex>}
