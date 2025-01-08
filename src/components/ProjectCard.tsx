@@ -57,6 +57,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <Flex
             fillWidth gap="m"
             direction="column"
+            minWidth={20}
+            maxWidth={50}
+            minHeight={30}
+            maxHeight={60}
             alignItems="start"
             justifyContent="center"
             >
