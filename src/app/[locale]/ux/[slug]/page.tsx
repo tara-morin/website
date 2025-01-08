@@ -96,12 +96,7 @@ export default function Project({ params }: WorkParams) {
 
 	return (
 		<Flex as="section"
-			fillWidth
-			style={{
-				width: '100%', // Ensure parent takes full width
-				height: 'auto', // Ensure height adapts to children
-				overflow: 'visible', // Prevent clipping
-			}}
+			fillWidth maxWidth="m"
 			direction="column" alignItems="center"
 			gap="l">
 			<script
@@ -127,13 +122,7 @@ export default function Project({ params }: WorkParams) {
 				}}
 			/>
 			<Flex
-				fillWidth
-				style={{
-					width: 'auto',
-					height: 'auto',
-					overflow: 'visible', // Prevent cutting off content
-					justifyContent: 'center', // Center the image if necessary
-				}}
+				fillWidth maxWidth="xs" gap="16"
 				direction="column">
 				<Button
 					href={`/${params.locale}/ux`}
@@ -147,48 +136,16 @@ export default function Project({ params }: WorkParams) {
 					{post.metadata.title}
 				</Heading>
 			</Flex>
-			<Flex
-    style={{
-        width: '550px', // Set the fixed width
-        height: '1200px', // Set the fixed height
-        overflow: 'hidden', // Ensure no content overflows the container
-        flexDirection: 'column', // Stack images vertically
-        alignItems: 'center', // Center images horizontally
-        justifyContent: 'start', // Align images at the top
-        padding: '16px', // Optional: Add some padding inside the container
-        border: '1px solid #ddd', // Optional: Add a border for clarity
-        backgroundColor: '#f9f9f9', // Optional: Add a background color
-    }}>
-    {post.metadata.images.map((image, index) => (
-        <SmartImage
-            key={index}
-            aspectRatio="1/5"
-  			radius="m"
-  			objectFit="contain"
-            alt={`image-${index}`}
-            src={image} />
-    ))}
-</Flex>
-			{/* {post.metadata.images.length > 0 && (
+			{post.metadata.images.length > 0 && (
 				<SmartImage
-				style={{
-					width: 'auto',
-					maxWidth: '100%', // Ensure the image scales to fit its container
-					height: 'auto', // Maintain the aspect ratio
-					objectFit: 'contain', // Adjust this based on your needs (e.g., 'cover', 'contain', or 'fill')
-				}}
+					aspectRatio="16 / 9"
 					radius="m"
 					alt="image"
 					src={post.metadata.images[0]}/>
-			)} */}
-			<Flex style={{
-				width: '100%', // Allow container to take full width
-				height: 'auto', // Adjust height based on content
-				overflow: 'visible', // Prevent cutting off content
-				justifyContent: 'center',
-			}}
+			)}
+			<Flex style={{margin: 'auto'}}
 				as="article"
-				fillWidth
+				maxWidth="xs" fillWidth
 				direction="column">
 				<Flex
 					gap="12" marginBottom="24"
