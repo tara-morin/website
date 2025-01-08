@@ -75,7 +75,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                         radius="l"
                         alt={title}
                         objectFit="contain"
-                        // aspectRatio="3/5"
                         src={images[activeIndex]}
                         style={{
                             border: '1px solid var(--neutral-alpha-weak)',
@@ -83,9 +82,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                                 cursor: 'pointer',
                             }),
                             minWidth:50,
-                            maxWidth:400,
-                            minHeight:300,
-                            maxHeight:2400,
+                            maxWidth:200,
+                            minHeight:400,
+                            maxHeight:900,
                         }}/>
                 </RevealFx>
             </Flex>}
