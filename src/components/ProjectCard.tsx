@@ -67,7 +67,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                         tabIndex={0}
                         radius="l"
                         alt={title}
-                        aspectRatio="16 / 9"
+                        objectFit="contain"
+                        aspectRatio="3 / 4"
                         src={images[activeIndex]}
                         style={{
                             border: '1px solid var(--neutral-alpha-weak)',
