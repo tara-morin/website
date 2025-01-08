@@ -128,7 +128,7 @@ export default function Project({ params }: WorkParams) {
 			<Flex
 				fillWidth
 				style={{
-					width: '100%',
+					width: 'auto',
 					height: 'auto',
 					overflow: 'visible', // Prevent cutting off content
 					justifyContent: 'center', // Center the image if necessary
@@ -148,9 +148,9 @@ export default function Project({ params }: WorkParams) {
 			</Flex>
 			{post.metadata.images.length > 0 && (
 				<SmartImage
-				aspectRatio="422/740"
 				style={{
-					width: '100%', // Ensure the image scales to fit its container
+					width: 'auto',
+					maxWidth: '100%', // Ensure the image scales to fit its container
 					height: 'auto', // Maintain the aspect ratio
 					objectFit: 'contain', // Adjust this based on your needs (e.g., 'cover', 'contain', or 'fill')
 				}}
