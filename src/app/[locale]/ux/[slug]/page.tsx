@@ -168,6 +168,7 @@ export default function Project({ params }: WorkParams) {
                 height: 'auto', // Maintain aspect ratio
                 maxHeight: '100%', // Ensure it doesn't exceed the container height
                 objectFit: 'contain', // Ensure the full image is visible
+				border: '2px solid red',
             }}
             radius="m"
             alt={`image-${index}`}
