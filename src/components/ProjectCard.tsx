@@ -57,10 +57,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <Flex
             fillWidth gap="m"
             direction="column"
-            style={{
-                alignItems: 'center', // Center the image in the vertical space
-                justifyContent: 'start', // Align content at the top
-            }}
             >
             {images[activeIndex] && <Flex onClick={handleImageClick}>
                 <RevealFx
