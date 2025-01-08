@@ -61,8 +61,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             // maxWidth={50}
             // minHeight={30}
             // maxHeight={60}
-            alignItems="start"
-            justifyContent="center"
+            // alignItems="start"
+            // justifyContent="center"
             >
             {images[activeIndex] && <Flex onClick={handleImageClick}>
                 <RevealFx
