@@ -8,7 +8,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { formatDate } from '@/app/utils/formatDate';
 import ScrollToHash from '@/components/ScrollToHash';
-import { OneProject } from '@/components/ux/Projects';
+import { OneProject } from '@/components/ux/OneProject';
 
 interface WorkParams {
     params: {
