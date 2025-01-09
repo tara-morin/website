@@ -1,6 +1,6 @@
 import { getPosts } from '@/app/utils/utils';
 import { Flex } from '@/once-ui/components';
-import { ProjectCard } from '@/components';
+import { ImageCarousel } from '@/components';
 
 interface ProjectsProps {
     slug: string; // Use slug to identify the specific project to display
@@ -21,7 +21,7 @@ export function OneProject({ slug, locale }: ProjectsProps) {
         <Flex
             fillWidth gap="xl" marginBottom="40" paddingX="l"
             direction="column">
-            <ProjectCard
+            <ImageCarousel
                 key={project.slug}
                 href={`ux/${project.slug}`}
                 images={project.metadata.images}
