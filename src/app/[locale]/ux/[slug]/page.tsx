@@ -80,24 +80,24 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 }
 
 export default function Project(
-	{ params: { locale, slug } }: { params: { locale: string; slug: string } }
+    { params: { locale, slug } }: { params: { locale: string; slug: string } }
 ) {
-	// unstable_setRequestLocale(params.locale);
-	let post = getPosts(['src', 'app', '[locale]', 'ux', 'projects', params.locale]).find((post) => post.slug === params.slug)
+    unstable_setRequestLocale(locale); // Use 'locale' directly
+    let post = getPosts(['src', 'app', '[locale]', 'ux', 'projects', locale]).find((post) => post.slug === slug); // Use 'slug' directly
 
-	if (!post) {
-		notFound()
-	}
+    if (!post) {
+        notFound();
+    }
 
-	const t = useTranslations();
-	const { person } = renderContent(t);
+    const t = useTranslations();
+    const { person, ux } = renderContent(t);
 
-	return (
-		<Flex as="section"
-			fillWidth maxWidth="m"
-			direction="column" alignItems="center"
-			gap="l">
-			<script
+    return (
+        <Flex as="section"
+            fillWidth maxWidth="m"
+            direction="column" alignItems="center"
+            gap="l">
+            <script
                 type="application/ld+json"
                 suppressHydrationWarning
                 dangerouslySetInnerHTML={{
@@ -112,75 +112,76 @@ export default function Project(
                             '@type': 'Person',
                             name: person.name,
                         },
-                        hasPart: post.map(project => ({
+                        hasPart: {
                             '@type': 'CreativeWork',
-                            headline: project.metadata.title,
-                            description: project.metadata.summary,
-                            url: `https://${baseURL}/projects/${project.slug}`,
-                            image: `${baseURL}/${project.metadata.image}`,
-                        })),
+                            headline: post.metadata.title,
+                            description: post.metadata.summary,
+                            url: `https://${baseURL}/projects/${post.slug}`,
+                            image: `${baseURL}/${post.metadata.image}`,
+                        },
                     }),
                 }}
             />
-            <Projects locale={locale}/>
-			<Flex
-				fillWidth maxWidth="xs" gap="16"
-				direction="column">
-				<Button
-					href={`/${params.locale}/ux`}
-					variant="tertiary"
-					size="s"
-					prefixIcon="chevronLeft">
-					Projects
-				</Button>
-				<Heading
-					variant="display-strong-s">
-					{post.metadata.title}
-				</Heading>
-			</Flex>
-			{post.metadata.figmaURL && (
-    <Flex
-        as="section"
-        direction="column"
-        alignItems="center"
-        marginTop="l">
-        <a
-            href={post.metadata.figmaURL}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-                textDecoration: 'none',
-                color: 'blue',
-                fontSize: '1.2em',
-                fontWeight: 'bold',
-                marginTop: '16px',
-            }}>
-            View on Figma
-        </a>
-    </Flex>
-)}
-			<Flex style={{margin: 'auto'}}
-				as="article"
-				maxWidth="xs" fillWidth
-				direction="column">
-				<Flex
-					gap="12" marginBottom="24"
-					alignItems="center">
-					{ post.metadata.team && (
-						<AvatarGroup
-							reverseOrder
-							avatars={avatars}
-							size="m"/>
-					)}
-					<Text
-						variant="body-default-s"
-						onBackground="neutral-weak">
-						{formatDate(post.metadata.publishedAt)}
-					</Text>
-				</Flex>
-				<CustomMDX source={post.content} />
-			</Flex>
-			<ScrollToHash />
-		</Flex>
-	)
+            <Projects locale={locale} />
+            <Flex
+                fillWidth maxWidth="xs" gap="16"
+                direction="column">
+                <Button
+                    href={`/${locale}/ux`} // Use 'locale' directly
+                    variant="tertiary"
+                    size="s"
+                    prefixIcon="chevronLeft">
+                    Projects
+                </Button>
+                <Heading
+                    variant="display-strong-s">
+                    {post.metadata.title}
+                </Heading>
+            </Flex>
+            {post.metadata.figmaURL && (
+                <Flex
+                    as="section"
+                    direction="column"
+                    alignItems="center"
+                    marginTop="l">
+                    <a
+                        href={post.metadata.figmaURL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            textDecoration: 'none',
+                            color: 'blue',
+                            fontSize: '1.2em',
+                            fontWeight: 'bold',
+                            marginTop: '16px',
+                        }}>
+                        View on Figma
+                    </a>
+                </Flex>
+            )}
+            <Flex style={{ margin: 'auto' }}
+                as="article"
+                maxWidth="xs" fillWidth
+                direction="column">
+                <Flex
+                    gap="12" marginBottom="24"
+                    alignItems="center">
+                    {post.metadata.team && (
+                        <AvatarGroup
+                            reverseOrder
+                            avatars={post.metadata.team} // Use the team metadata
+                            size="m" />
+                    )}
+                    <Text
+                        variant="body-default-s"
+                        onBackground="neutral-weak">
+                        {formatDate(post.metadata.publishedAt)}
+                    </Text>
+                </Flex>
+                <CustomMDX source={post.content} />
+            </Flex>
+            <ScrollToHash />
+        </Flex>
+    );
 }
+
