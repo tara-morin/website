@@ -58,7 +58,7 @@ export default function UX(
             <Text variant="body-default-l">{ux.description}</Text>
 
             {allProjects.map((project) => {
-                const projectImage = `/images/${project.slug}.png`; // Image from the images folder
+                const projectImage = `/images/projects/project-01/${project.slug}.png`; // Image from the images folder
 
                 return (
                     <Flex
