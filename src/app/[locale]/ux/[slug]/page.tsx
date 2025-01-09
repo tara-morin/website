@@ -82,7 +82,7 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 export default function Project(
 	{ params: { locale, slug } }: { params: { locale: string; slug: string } }
 ) {
-	unstable_setRequestLocale(params.locale);
+	// unstable_setRequestLocale(params.locale);
 	let post = getPosts(['src', 'app', '[locale]', 'ux', 'projects', params.locale]).find((post) => post.slug === params.slug)
 
 	if (!post) {
