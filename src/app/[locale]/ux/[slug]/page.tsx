@@ -8,7 +8,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { formatDate } from '@/app/utils/formatDate';
 import ScrollToHash from '@/components/ScrollToHash';
-import { Project } from '@/components/ux/Projects';
+import { OneProject } from '@/components/ux/Projects';
 
 interface WorkParams {
     params: {
@@ -98,7 +98,7 @@ export default function Project(
             fillWidth maxWidth="m"
             direction="column" alignItems="center"
             gap="l">
-            <Project slug={slug} locale={locale} />
+            <OneProject slug={slug} locale={locale} />
             <Flex
                 fillWidth maxWidth="xs" gap="16"
                 direction="column">
