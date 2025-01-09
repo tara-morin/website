@@ -167,12 +167,6 @@ export default function Project(
                 <Flex
                     gap="12" marginBottom="24"
                     alignItems="center">
-                    {post.metadata.team && (
-                        <AvatarGroup
-                            reverseOrder
-                            avatars={post.metadata.team} // Use the team metadata
-                            size="m" />
-                    )}
                     <Text
                         variant="body-default-s"
                         onBackground="neutral-weak">
