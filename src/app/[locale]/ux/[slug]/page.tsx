@@ -79,7 +79,9 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 	}
 }
 
-export default function Project({ params }: WorkParams) {
+export default function Project(
+	{ params: { locale, slug } }: { params: { locale: string; slug: string } }
+) {
 	unstable_setRequestLocale(params.locale);
 	let post = getPosts(['src', 'app', '[locale]', 'ux', 'projects', params.locale]).find((post) => post.slug === params.slug)
 
@@ -90,37 +92,37 @@ export default function Project({ params }: WorkParams) {
 	const t = useTranslations();
 	const { person } = renderContent(t);
 
-	const avatars = post.metadata.team?.map((person) => ({
-        src: person.avatar,
-    })) || [];
-
 	return (
 		<Flex as="section"
 			fillWidth maxWidth="m"
 			direction="column" alignItems="center"
 			gap="l">
 			<script
-				type="application/ld+json"
-				suppressHydrationWarning
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'BlogPosting',
-						headline: post.metadata.title,
-						datePublished: post.metadata.publishedAt,
-						dateModified: post.metadata.publishedAt,
-						description: post.metadata.summary,
-						image: post.metadata.images.length > 0
-							? `https://${baseURL}/${post.metadata.images[0]}`
-							: `https://${baseURL}/og?title=${post.metadata.title}`,
-						url: `https://${baseURL}/${params.locale}/ux/${post.slug}`,
-						author: {
-							'@type': 'Person',
-							name: person.name,
-						},
-					}),
-				}}
-			/>
+                type="application/ld+json"
+                suppressHydrationWarning
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'CollectionPage',
+                        headline: ux.title,
+                        description: ux.description,
+                        url: `https://${baseURL}/projects`,
+                        image: `${baseURL}/og?title=Design%20Projects`,
+                        author: {
+                            '@type': 'Person',
+                            name: person.name,
+                        },
+                        hasPart: post.map(project => ({
+                            '@type': 'CreativeWork',
+                            headline: project.metadata.title,
+                            description: project.metadata.summary,
+                            url: `https://${baseURL}/projects/${project.slug}`,
+                            image: `${baseURL}/${project.metadata.image}`,
+                        })),
+                    }),
+                }}
+            />
+            <Projects locale={locale}/>
 			<Flex
 				fillWidth maxWidth="xs" gap="16"
 				direction="column">
@@ -136,24 +138,6 @@ export default function Project({ params }: WorkParams) {
 					{post.metadata.title}
 				</Heading>
 			</Flex>
-			{/* Loop through all project images */}
-			{post.metadata.images.length > 0 && (
-				<Flex
-					as="section"
-					direction="column"
-					alignItems="center"
-					gap="l">
-					{post.metadata.images.map((image, index) => (
-						<SmartImage
-							key={index}
-							aspectRatio="16 / 9"
-							radius="m"
-							alt={`Project image ${index + 1}`}
-							src={`https://${baseURL}/${image}`} // Adjust if `image` is already a full URL
-						/>
-					))}
-				</Flex>
-			)}
 			{post.metadata.figmaURL && (
     <Flex
         as="section"
