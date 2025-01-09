@@ -98,29 +98,6 @@ export default function Project(
             fillWidth maxWidth="m"
             direction="column" alignItems="center"
             gap="l">
-            <script
-                type="application/ld+json"
-                suppressHydrationWarning
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        '@context': 'https://schema.org',
-                        '@type': 'CollectionPage',
-                        // headline: ux.title,
-                        // description: ux.description,
-                        image: `${baseURL}/og?title=Design%20Projects`,
-                        // author: {
-                        //     '@type': 'Person',
-                        //     name: person.name,
-                        // },
-                        hasPart: {
-                            '@type': 'CreativeWork',
-                            // headline: post.metadata.title,
-                            // description: post.metadata.summary,
-                            image: `${baseURL}/${post.metadata.image}`,
-                        },
-                    }),
-                }}
-            />
             <Projects locale={locale} />
             <Flex
                 fillWidth maxWidth="xs" gap="16"
