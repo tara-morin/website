@@ -4,7 +4,7 @@ import { AvatarGroup, Flex, Heading, RevealFx, SmartImage, SmartLink, Text } fro
 import { useEffect, useState } from "react";
 import { useTranslations } from 'next-intl';
 
-interface ProjectCardProps {
+interface ImageProps {
     href: string;
     images: string[];
     title: string;
@@ -13,7 +13,7 @@ interface ProjectCardProps {
     avatars: { src: string }[];
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({
+export const ImageCarousel: React.FC<ImageProps> = ({
     href,
     images = [],
     title,
