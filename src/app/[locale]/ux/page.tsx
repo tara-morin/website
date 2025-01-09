@@ -78,12 +78,16 @@ export default function UX(
                             alt={project.metadata.title}
                             src={projectImage}
                         />
-                        <Text variant="body-default-s">
+                        <Text variant="body-default-s"
+                        color="white"
+                        >
                             {project.metadata.summary}
                         </Text>
                         <Button
                             href={`/ux/${project.slug}`}
                             variant="primary"
+                            suffixIcon="chevronRight"
+                            color= "#12007d"
                         >
                             Read More
                         </Button>
