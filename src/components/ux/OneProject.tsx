@@ -13,13 +13,15 @@ export function OneProject({ slug, locale }: ProjectsProps) {
 
     const project = allProjects.find(post => post.slug === slug);
 
-    if (!project) {
-        return <div>Project not found</div>; // Handle case if the project isn't found
-    }
+    const displayedProjects = range
+        ? project.slice(range[0] - 1, range[1] ?? project.length)
+        : project;
+
     return (
         <Flex
             fillWidth gap="xl" marginBottom="40" paddingX="l"
             direction="column">
+            {displayedProjects.map((post) => (
                 <ProjectCard
                     key={post.slug}
                     href={`ux/${post.slug}`}
@@ -28,6 +30,7 @@ export function OneProject({ slug, locale }: ProjectsProps) {
                     description={post.metadata.summary}
                     content={post.content}
                     avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}/>
+            ))}
         </Flex>
     );
 }
