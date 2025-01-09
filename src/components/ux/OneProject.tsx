@@ -20,7 +20,6 @@ export function OneProject({ slug, locale }: ProjectsProps) {
         <Flex
             fillWidth gap="xl" marginBottom="40" paddingX="l"
             direction="column">
-            {displayedProjects.map((post) => (
                 <ProjectCard
                     key={post.slug}
                     href={`ux/${post.slug}`}
@@ -29,7 +28,6 @@ export function OneProject({ slug, locale }: ProjectsProps) {
                     description={post.metadata.summary}
                     content={post.content}
                     avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}/>
-            ))}
         </Flex>
     );
 }
