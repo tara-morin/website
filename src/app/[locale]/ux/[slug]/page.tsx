@@ -107,7 +107,6 @@ export default function Project(
                         '@type': 'CollectionPage',
                         headline: ux.title,
                         description: ux.description,
-                        url: `https://${baseURL}/projects`,
                         image: `${baseURL}/og?title=Design%20Projects`,
                         author: {
                             '@type': 'Person',
@@ -117,7 +116,6 @@ export default function Project(
                             '@type': 'CreativeWork',
                             headline: post.metadata.title,
                             description: post.metadata.summary,
-                            url: `https://${baseURL}/projects/${post.slug}`,
                             image: `${baseURL}/${post.metadata.image}`,
                         },
                     }),
