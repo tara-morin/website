@@ -105,17 +105,17 @@ export default function Project(
                     __html: JSON.stringify({
                         '@context': 'https://schema.org',
                         '@type': 'CollectionPage',
-                        headline: ux.title,
-                        description: ux.description,
+                        // headline: ux.title,
+                        // description: ux.description,
                         image: `${baseURL}/og?title=Design%20Projects`,
-                        author: {
-                            '@type': 'Person',
-                            name: person.name,
-                        },
+                        // author: {
+                        //     '@type': 'Person',
+                        //     name: person.name,
+                        // },
                         hasPart: {
                             '@type': 'CreativeWork',
-                            headline: post.metadata.title,
-                            description: post.metadata.summary,
+                            // headline: post.metadata.title,
+                            // description: post.metadata.summary,
                             image: `${baseURL}/${post.metadata.image}`,
                         },
                     }),
