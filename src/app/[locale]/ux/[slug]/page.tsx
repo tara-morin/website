@@ -110,10 +110,10 @@ export default function Project({ params }: WorkParams) {
 						datePublished: post.metadata.publishedAt,
 						dateModified: post.metadata.publishedAt,
 						description: post.metadata.summary,
-						image: post.metadata.image
-							? `https://${baseURL}${post.metadata.image}`
+						image: post.metadata.images.length > 0
+							? `https://${baseURL}/${post.metadata.images[0]}`
 							: `https://${baseURL}/og?title=${post.metadata.title}`,
-							url: `https://${baseURL}/${params.locale}/ux/${post.slug}`,
+						url: `https://${baseURL}/${params.locale}/ux/${post.slug}`,
 						author: {
 							'@type': 'Person',
 							name: person.name,
@@ -136,12 +136,23 @@ export default function Project({ params }: WorkParams) {
 					{post.metadata.title}
 				</Heading>
 			</Flex>
+			{/* Loop through all project images */}
 			{post.metadata.images.length > 0 && (
-				<SmartImage
-					aspectRatio="16 / 9"
-					radius="m"
-					alt="image"
-					src={post.metadata.images[0]}/>
+				<Flex
+					as="section"
+					direction="column"
+					alignItems="center"
+					gap="l">
+					{post.metadata.images.map((image, index) => (
+						<SmartImage
+							key={index}
+							aspectRatio="16 / 9"
+							radius="m"
+							alt={`Project image ${index + 1}`}
+							src={`https://${baseURL}/${image}`} // Adjust if `image` is already a full URL
+						/>
+					))}
+				</Flex>
 			)}
 			<Flex style={{margin: 'auto'}}
 				as="article"
