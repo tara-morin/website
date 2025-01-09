@@ -8,7 +8,7 @@ interface ProjectsProps {
     locale: string;
 }
 
-export function Projects({ slug, locale }: ProjectsProps) {
+export function OneProject({ slug, locale }: ProjectsProps) {
     let allProjects = getPosts(['src', 'app', '[locale]', 'ux', 'projects', locale]);
 
     const project = allProjects.find(post => post.slug === slug);
