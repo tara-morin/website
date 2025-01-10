@@ -98,17 +98,17 @@ export default function Project(
             fillWidth maxWidth="m"
             direction="column" alignItems="center"
             gap="l">
-            <OneProject slug={slug} locale={locale} />
-            <Flex
-                fillWidth maxWidth="xs" gap="16"
-                direction="column">
-                <Button
+            <Button
                     href={`/${locale}/ux`} // Use 'locale' directly
                     variant="tertiary"
                     size="s"
                     prefixIcon="chevronLeft">
-                    Projects
+                    UX Projects
                 </Button>
+            <OneProject slug={slug} locale={locale} />
+            <Flex
+                fillWidth maxWidth="xs" gap="16"
+                direction="column">
                 <Heading
                     variant="display-strong-s">
                     {post.metadata.title}
