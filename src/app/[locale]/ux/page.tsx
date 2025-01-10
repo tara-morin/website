@@ -47,7 +47,7 @@ export default function UX({ params: { locale } }: { params: { locale: string } 
     return (
         <Flex fillWidth maxWidth="m" direction="column" gap="l">
             <Heading variant="display-strong-l">{ux.title}</Heading>
-            <Text variant="body-default-l">{ux.description}</Text>
+            <Text variant="body-default-l" style={{font: 'Lora',}}>{ux.description}</Text>
 
             {allProjects.map((project) => {
                 const projectImage = `/images/projects/project-01/${project.slug}.png`; // Image from the images folder
@@ -76,7 +76,8 @@ export default function UX({ params: { locale } }: { params: { locale: string } 
                         <Button
                             style={{
                                 backgroundColor: '#12007d',
-                                color: '#FFFFFF', // Ensure color starts with '#'
+                                color: '#FFFFFF',
+                                font: 'Lora',
                             }}
                             href={`/ux/${project.slug}`}
                             variant="primary"
