@@ -84,10 +84,13 @@ export default function UX(
                             {project.metadata.summary}
                         </Text>
                         <Button
+                            style={
+                                backgroundColor: '#12007d',
+                                color: 'FFFFFF'
+                            }
                             href={`/ux/${project.slug}`}
                             variant="primary"
                             suffixIcon="chevronRight"
-                            color= "#12007d"
                         >
                             Read More
                         </Button>
