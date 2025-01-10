@@ -37,10 +37,7 @@ export async function generateMetadata(
         },
     };
 }
-
-export default function UX(
-    { params: { locale } }: { params: { locale: string } }
-) {
+export default function UX({ params: { locale } }: { params: { locale: string } }) {
     unstable_setRequestLocale(locale);
     const allProjects = getPosts(['src', 'app', '[locale]', 'ux', 'projects', locale]);
 
@@ -48,12 +45,7 @@ export default function UX(
     const { ux } = renderContent(t);
 
     return (
-        <Flex
-            fillWidth
-            maxWidth="m"
-            direction="column"
-            gap="l"
-        >
+        <Flex fillWidth maxWidth="m" direction="column" gap="l">
             <Heading variant="display-strong-l">{ux.title}</Heading>
             <Text variant="body-default-l">{ux.description}</Text>
 
@@ -78,16 +70,14 @@ export default function UX(
                             alt={project.metadata.title}
                             src={projectImage}
                         />
-                        <Text variant="body-default-s"
-                        color="white"
-                        >
+                        <Text variant="body-default-s" color="white">
                             {project.metadata.summary}
                         </Text>
                         <Button
-                            style={
+                            style={{
                                 backgroundColor: '#12007d',
-                                color: 'FFFFFF'
-                            }
+                                color: '#FFFFFF', // Ensure color starts with '#'
+                            }}
                             href={`/ux/${project.slug}`}
                             variant="primary"
                             suffixIcon="chevronRight"
@@ -100,6 +90,7 @@ export default function UX(
         </Flex>
     );
 }
+
 
 // import { getPosts } from '@/app/utils/utils';
 // import { Flex } from '@/once-ui/components';
