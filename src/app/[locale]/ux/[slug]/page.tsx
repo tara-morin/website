@@ -130,6 +130,7 @@ export default function Project(
                             fontSize: '1.2em',
                             fontWeight: 'bold',
                             marginTop: '16px',
+                            font: 'Lora',
                         }}>
                         View on Figma
                     </a>
