@@ -8,7 +8,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { formatDate } from '@/app/utils/formatDate';
 import ScrollToHash from '@/components/ScrollToHash';
-import { OneProject } from '@/components/ux/OneProject';
+import { MLProject } from '@/components/machine_learning/MLProject';
 
 interface WorkParams {
     params: {
@@ -99,7 +99,7 @@ export default function Project(
                     prefixIcon="chevronLeft">
                     ML Projects
                 </Button>
-            <OneProject slug={slug} locale={locale} />
+            <MLProject slug={slug} locale={locale} />
             <Flex
                 fillWidth maxWidth="xs" gap="16"
                 direction="column">
