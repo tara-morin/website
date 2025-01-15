@@ -5,7 +5,7 @@ import { Projects } from '@/components/ux/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
 import { Mailchimp } from '@/components';
-import { Posts } from '@/components/machine_learning/Posts';
+import { Projects2 } from '@/components/machine_learning/projects';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
@@ -141,7 +141,7 @@ export default function Home(
 					</Flex>
 					<Flex
 						flex={3} paddingX="20">
-						<Posts range={[1,2]} columns="2" locale={locale}/>
+						<Projects2 range={[1,2]} columns="2" locale={locale}/>
 					</Flex>
 				</Flex>
 			)}
