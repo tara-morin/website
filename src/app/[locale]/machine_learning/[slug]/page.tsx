@@ -36,7 +36,7 @@ export async function generateStaticParams(): Promise<{ slug: string; locale: st
 }
 
 export function generateMetadata({ params: { slug, locale } }: WorkParams) {
-	let post = getPosts(['src', 'app', '[locale]', 'ux', 'projects', locale]).find((post) => post.slug === slug)
+	let post = getPosts(['src', 'app', '[locale]', 'machine_learning', 'projects', locale]).find((post) => post.slug === slug)
 	
 	if (!post) {
 		return
@@ -71,12 +71,6 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 				},
 			],
 		},
-		twitter: {
-			card: 'summary_large_image',
-			title,
-			description,
-			images: [ogImage],
-		},
 	}
 }
 
@@ -91,7 +85,7 @@ export default function Project(
     }
 
     const t = useTranslations();
-    const { person, ux } = renderContent(t);
+    const { person, machine_learning } = renderContent(t);
 
     return (
         <Flex as="section"
