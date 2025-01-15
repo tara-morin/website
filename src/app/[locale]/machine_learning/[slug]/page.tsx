@@ -93,7 +93,7 @@ export default function Project(
             direction="column" alignItems="center"
             gap="l">
             <Button
-                    href={`/${locale}/machine)learning`} // Use 'locale' directly
+                    href={`/${locale}/machine_learning`} // Use 'locale' directly
                     variant="tertiary"
                     size="s"
                     prefixIcon="chevronLeft">
