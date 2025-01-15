@@ -1,91 +1,93 @@
-import { Flex, Heading } from '@/once-ui/components';
-import { Mailchimp } from '@/components';
-import { Posts } from '@/components/machine_learning/Posts';
-import { baseURL, renderContent } from '@/app/resources'
+import { getPosts } from '@/app/utils/utils';
+import { Flex, Heading, SmartImage, Text, Button } from '@/once-ui/components';
+import { baseURL, renderContent } from '@/app/resources';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
 export async function generateMetadata(
-	{params: {locale}}: { params: { locale: string }}
+    { params: { locale } }: { params: { locale: string } }
 ) {
+    const t = await getTranslations();
+    const { ux } = renderContent(t);
 
-	const t = await getTranslations();
-	const { machine_learning } = renderContent(t);
+    const title = ux.title;
+    const description = ux.description;
+    const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
-	const title = machine_learning.title;
-	const description = machine_learning.description;
-	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
-
-	return {
-		title,
-		description,
-		openGraph: {
-			title,
-			description,
-			type: 'website',
-			url: `https://${baseURL}/${locale}/machine_learning`,
-			images: [
-				{
-					url: ogImage,
-					alt: title,
-				},
-			],
-		},
-		twitter: {
-			card: 'summary_large_image',
-			title,
-			description,
-			images: [ogImage],
-		},
-	};
+    return {
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            type: 'website',
+            url: `https://${baseURL}/${locale}/ux/`,
+            images: [
+                {
+                    url: ogImage,
+                    alt: title,
+                },
+            ],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+            images: [ogImage],
+        },
+    };
 }
+export default function UX({ params: { locale } }: { params: { locale: string } }) {
+    unstable_setRequestLocale(locale);
+    const allProjects = getPosts(['src', 'app', '[locale]', 'ux', 'projects', locale]);
 
-export default function machine_learning(
-	{ params: {locale}}: { params: { locale: string }}
-) {
-	unstable_setRequestLocale(locale);
+    const t = useTranslations();
+    const { ux } = renderContent(t);
 
-	const t = useTranslations();
-	const { person, machine_learning, newsletter } = renderContent(t);
     return (
-        <Flex
-			fillWidth maxWidth="s"
-			direction="column">
-            <script
-				type="application/ld+json"
-				suppressHydrationWarning
-				dangerouslySetInnerHTML={{
-					__html: JSON.stringify({
-						'@context': 'https://schema.org',
-						'@type': 'Machine Learning',
-						headline: machine_learning.title,
-						description: machine_learning.description,
-						url: `https://${baseURL}/machine_learning`,
-						image: `${baseURL}/og?title=${encodeURIComponent(machine_learning.title)}`,
-						author: {
-							'@type': 'Person',
-							name: person.name,
-                            image: {
-								'@type': 'ImageObject',
-								url: `${baseURL}${person.avatar}`,
-							},
-						},
-					}),
-				}}
-			/>
-            <Heading
-                marginBottom="l"
-                variant="display-strong-s">
-                {machine_learning.title}
-            </Heading>
-			<Flex
-				fillWidth flex={1} direction="column">
-				<Posts range={[1,3]} locale={locale} thumbnail/>
-				<Posts range={[4]} columns="2" locale={locale}/>
-			</Flex>
-            {newsletter.display && (
-                <Mailchimp newsletter={newsletter} />
-            )}
+        <Flex fillWidth maxWidth="m" direction="column" gap="l">
+            <Heading variant="display-strong-l">{ux.title}</Heading>
+            <Text variant="body-default-l" style={{font: 'Lora',}}>{ux.description}</Text>
+
+            {allProjects.map((project) => {
+                const projectImage = `/images/projects/project-01/${project.slug}.png`; // Image from the images folder
+
+                return (
+                    <Flex
+                        key={project.slug}
+                        as="article"
+                        direction="column"
+                        gap="m"
+                        padding="m"
+                        border="brand-medium"
+                    >
+                        <Heading variant="display-default-m">
+                            {project.metadata.title}
+                        </Heading>
+                        <SmartImage
+                            aspectRatio="16 / 9"
+                            radius="m"
+                            alt={project.metadata.title}
+                            src={projectImage}
+                        />
+                        <Text variant="body-default-s" color="white">
+                            {project.metadata.summary}
+                        </Text>
+                        <Button
+                            style={{
+                                backgroundColor: '#12007d',
+                                color: '#FFFFFF',
+                                font: 'Lora',
+                            }}
+                            href={`/ux/${project.slug}`}
+                            variant="primary"
+                            suffixIcon="chevronRight"
+                        >
+                            Read More
+                        </Button>
+                    </Flex>
+                );
+            })}
         </Flex>
     );
 }
