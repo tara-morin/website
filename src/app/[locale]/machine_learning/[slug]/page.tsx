@@ -108,28 +108,6 @@ export default function Project(
                     {post.metadata.title}
                 </Heading>
             </Flex>
-            {post.metadata.figmaURL && (
-                <Flex
-                    as="section"
-                    direction="column"
-                    alignItems="center"
-                    marginTop="l">
-                    <a
-                        href={post.metadata.figmaURL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                            textDecoration: 'none',
-                            color: 'blue',
-                            fontSize: '1.2em',
-                            fontWeight: 'bold',
-                            marginTop: '16px',
-                            font: 'Lora',
-                        }}>
-                        View on Figma
-                    </a>
-                </Flex>
-            )}
             <Flex style={{ margin: 'auto' }}
                 as="article"
                 maxWidth="xs" fillWidth
