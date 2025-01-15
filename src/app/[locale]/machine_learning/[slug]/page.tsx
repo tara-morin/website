@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { CustomMDX } from '@/components/mdx'
 import { getPosts } from '@/app/utils/utils'
-import { AvatarGroup, Button, Flex, Heading, SmartImage, Text } from '@/once-ui/components'
+import { Button, Flex, Heading, SmartImage, Text } from '@/once-ui/components'
 import { baseURL, renderContent } from '@/app/resources';
 import { routing } from '@/i18n/routing';
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -25,7 +25,7 @@ export async function generateStaticParams(): Promise<{ slug: string; locale: st
 
     // Fetch posts for each locale
     for (const locale of locales) {
-        const posts = getPosts(['src', 'app', '[locale]', 'ux', 'projects', locale]);
+        const posts = getPosts(['src', 'app', '[locale]', 'machine_learning', 'projects', locale]);
         allPosts.push(...posts.map(post => ({
             slug: post.slug,
             locale: locale,
@@ -64,7 +64,7 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 			description,
 			type: 'article',
 			publishedTime,
-			url: `https://${baseURL}/${locale}/ux/${post.slug}`,
+			url: `https://${baseURL}/${locale}/machine_learning/${post.slug}`,
 			images: [
 				{
 					url: ogImage,
@@ -84,7 +84,7 @@ export default function Project(
     { params: { locale, slug } }: { params: { locale: string; slug: string } }
 ) {
     unstable_setRequestLocale(locale); // Use 'locale' directly
-    let post = getPosts(['src', 'app', '[locale]', 'ux', 'projects', locale]).find((post) => post.slug === slug); // Use 'slug' directly
+    let post = getPosts(['src', 'app', '[locale]', 'machine_learning', 'projects', locale]).find((post) => post.slug === slug); // Use 'slug' directly
 
     if (!post) {
         notFound();
@@ -99,11 +99,11 @@ export default function Project(
             direction="column" alignItems="center"
             gap="l">
             <Button
-                    href={`/${locale}/ux`} // Use 'locale' directly
+                    href={`/${locale}/machine)learning`} // Use 'locale' directly
                     variant="tertiary"
                     size="s"
                     prefixIcon="chevronLeft">
-                    UX Projects
+                    ML Projects
                 </Button>
             <OneProject slug={slug} locale={locale} />
             <Flex

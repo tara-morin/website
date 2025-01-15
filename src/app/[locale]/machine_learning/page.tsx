@@ -8,10 +8,10 @@ export async function generateMetadata(
     { params: { locale } }: { params: { locale: string } }
 ) {
     const t = await getTranslations();
-    const { ux } = renderContent(t);
+    const { ml } = renderContent(t);
 
-    const title = ux.title;
-    const description = ux.description;
+    const title = ml.title;
+    const description = ml.description;
     const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
     return {
@@ -21,7 +21,7 @@ export async function generateMetadata(
             title,
             description,
             type: 'website',
-            url: `https://${baseURL}/${locale}/ux/`,
+            url: `https://${baseURL}/${locale}/machine_learning/`,
             images: [
                 {
                     url: ogImage,
@@ -37,17 +37,17 @@ export async function generateMetadata(
         },
     };
 }
-export default function UX({ params: { locale } }: { params: { locale: string } }) {
+export default function ML({ params: { locale } }: { params: { locale: string } }) {
     unstable_setRequestLocale(locale);
-    const allProjects = getPosts(['src', 'app', '[locale]', 'ux', 'projects', locale]);
+    const allProjects = getPosts(['src', 'app', '[locale]', 'machine_learning', 'projects', locale]);
 
     const t = useTranslations();
-    const { ux } = renderContent(t);
+    const { ml } = renderContent(t);
 
     return (
         <Flex fillWidth maxWidth="m" direction="column" gap="l">
-            <Heading variant="display-strong-l">{ux.title}</Heading>
-            <Text variant="body-default-l" style={{font: 'Lora',}}>{ux.description}</Text>
+            <Heading variant="display-strong-l">{ml.title}</Heading>
+            <Text variant="body-default-l" style={{font: 'Lora',}}>{ml.description}</Text>
 
             {allProjects.map((project) => {
                 const projectImage = `/images/projects/project-01/${project.slug}.png`; // Image from the images folder
@@ -85,7 +85,7 @@ export default function UX({ params: { locale } }: { params: { locale: string } 
                         >
                             Read More
                         </Button>
-                    </Flex>
+                     </Flex>
                 );
             })}
         </Flex>
