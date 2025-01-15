@@ -7,7 +7,7 @@ export default async function sitemap() {
     const includeLocalePrefix = locales.length > 1;
 
     let blogs = locales.flatMap((locale) => 
-        getPosts(['src', 'app', '[locale]', 'machine_learning', 'posts', locale]).map((post) => ({
+        getPosts(['src', 'app', '[locale]', 'machine_learning', 'projects', locale]).map((post) => ({
             url: `${baseURL}${includeLocalePrefix ? `/${locale}` : ''}/machine_learning/${post.slug}`,
             lastModified: post.metadata.publishedAt,
         }))
