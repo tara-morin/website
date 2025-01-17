@@ -73,7 +73,7 @@ export default function machine_learning({ params: { locale } }: { params: { loc
                                 color: '#FFFFFF',
                                 font: 'Lora',
                             }}
-                            href={`/ux/${project.slug}`}
+                            href={`/machine_learning/${project.slug}`}
                             variant="primary"
                             suffixIcon="chevronRight"
                         >
