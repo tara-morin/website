@@ -68,7 +68,7 @@ function getMDXData(dir: string) {
             const slug = path.basename(file, path.extname(file));
             return { metadata, slug, content };
         })
-        .filter((post) => isValidURL(post.metadata.figmaURL)); // Only include posts with valid Figma URLs
+        // .filter((post) => isValidURL(post.metadata.figmaURL)); // Only include posts with valid Figma URLs
 }
 
 export function getPosts(customPath = ['', '', '', '']) {
