@@ -156,8 +156,8 @@ const about = {
 
 const machine_learning = {
     label: 'Machine Learning',
-    title: 'Writing about design and tech...',
-    description: `Read what ${person.name} has been up to recently`
+    title: 'Machine Learning Projects',
+    description: `Displayed below are the machine learning projects I have completed to analyze data. `
     // Create new blog posts by adding a new .mdx file to app/blog/posts
     // All posts will be listed on the /blog route
 }
@@ -165,7 +165,7 @@ const machine_learning = {
 const ux = {
     label: 'UX Design',
     title: 'My projects',
-    description: `Design and dev projects by ${person.name}`
+    description: `Design projects (with accompanying prototypes) I have created.`
     // Create new project pages by adding a new .mdx file to app/blog/posts
     // All projects will be listed on the /home and /work routes
 }
