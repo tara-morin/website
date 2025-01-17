@@ -90,7 +90,7 @@ export default function machine_learning({ params: { locale } }: { params: { loc
         );
     })
 ) : (
-    <Text>No projects found.</Text>
+    <Text>No projects found for locale: {locale}.</Text>
 )}
 
         </Flex>
