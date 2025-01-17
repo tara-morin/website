@@ -23,7 +23,7 @@ export function MLProject({ slug, locale }: ProjectsProps) {
             direction="column">
             <ImageCarousel
                 key={project.slug}
-                href={`ux/${project.slug}`}
+                href={`machine_learning/${project.slug}`}
                 images={project.metadata.images}
                 title={project.metadata.title}
                 description={project.metadata.summary}
