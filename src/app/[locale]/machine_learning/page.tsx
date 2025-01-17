@@ -49,45 +49,50 @@ export default function machine_learning({ params: { locale } }: { params: { loc
             <Heading variant="display-strong-l">{machine_learning.title}</Heading>
             <Text variant="body-default-l" style={{font: 'Lora',}}>{machine_learning.description}</Text>
 
-            {allProjects.map((project) => {
-                const projectImage = `/images/projects/project-01/${project.slug}.png`; // Image from the images folder
+            {allProjects.length > 0 ? (
+    allProjects.map((project) => {
+        const projectImage = `/images/projects/project-01/${project.slug}.png`; // Image from the images folder
 
-                return (
-                    <Flex
-                        key={project.slug}
-                        as="article"
-                        direction="column"
-                        gap="m"
-                        padding="m"
-                        border="brand-medium"
-                    >
-                        <Heading variant="display-default-m">
-                            {project.metadata.title}
-                        </Heading>
-                        <SmartImage
-                            aspectRatio="16 / 9"
-                            radius="m"
-                            alt={project.metadata.title}
-                            src={projectImage}
-                        />
-                        <Text variant="body-default-s" color="white">
-                            {project.metadata.summary}
-                        </Text>
-                        <Button
-                            style={{
-                                backgroundColor: '#12007d',
-                                color: '#FFFFFF',
-                                font: 'Lora',
-                            }}
-                            href={`/machine_learning/${project.slug}`}
-                            variant="primary"
-                            suffixIcon="chevronRight"
-                        >
-                            Read More
-                        </Button>
-                    </Flex>
-                );
-            })}
+        return (
+            <Flex
+                key={project.slug}
+                as="article"
+                direction="column"
+                gap="m"
+                padding="m"
+                border="brand-medium"
+            >
+                <Heading variant="display-default-m">
+                    {project.metadata?.title || 'Untitled Project'}
+                </Heading>
+                <SmartImage
+                    aspectRatio="16 / 9"
+                    radius="m"
+                    alt={project.metadata?.title || 'Untitled Project'}
+                    src={projectImage}
+                />
+                <Text variant="body-default-s" color="white">
+                    {project.metadata?.summary || 'No summary available.'}
+                </Text>
+                <Button
+                    style={{
+                        backgroundColor: '#12007d',
+                        color: '#FFFFFF',
+                        font: 'Lora',
+                    }}
+                    href={`/machine_learning/${project.slug}`}
+                    variant="primary"
+                    suffixIcon="chevronRight"
+                >
+                    Read More
+                </Button>
+            </Flex>
+        );
+    })
+) : (
+    <Text>No projects found.</Text>
+)}
+
         </Flex>
     );
 }
