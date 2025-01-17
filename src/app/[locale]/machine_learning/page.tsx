@@ -29,6 +29,12 @@ export async function generateMetadata(
                 },
             ],
         },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+            images: [ogImage],
+        },
     };
 }
 export default function machine_learning({ params: { locale } }: { params: { locale: string } }) {
@@ -79,7 +85,7 @@ export default function machine_learning({ params: { locale } }: { params: { loc
                         >
                             Read More
                         </Button>
-                     </Flex>
+                    </Flex>
                 );
             })}
         </Flex>
