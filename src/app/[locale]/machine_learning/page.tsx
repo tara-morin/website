@@ -8,10 +8,10 @@ export async function generateMetadata(
     { params: { locale } }: { params: { locale: string } }
 ) {
     const t = await getTranslations();
-    const { ml } = renderContent(t);
+    const { machine_learning } = renderContent(t);
 
-    const title = ml.title;
-    const description = ml.description;
+    const title = machine_learning.title;
+    const description = machine_learning.description;
     const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
     return {
@@ -31,17 +31,17 @@ export async function generateMetadata(
         },
     };
 }
-export default function ML({ params: { locale } }: { params: { locale: string } }) {
+export default function machine_learning({ params: { locale } }: { params: { locale: string } }) {
     unstable_setRequestLocale(locale);
     const allProjects = getPosts(['src', 'app', '[locale]', 'machine_learning', 'projects', locale]);
 
     const t = useTranslations();
-    const { ml } = renderContent(t);
+    const { machine_learning } = renderContent(t);
 
     return (
         <Flex fillWidth maxWidth="m" direction="column" gap="l">
-            <Heading variant="display-strong-l">{ml.title}</Heading>
-            <Text variant="body-default-l" style={{font: 'Lora',}}>{ml.description}</Text>
+            <Heading variant="display-strong-l">{machine_learning.title}</Heading>
+            <Text variant="body-default-l" style={{font: 'Lora',}}>{machine_learning.description}</Text>
 
             {allProjects.map((project) => {
                 const projectImage = `/images/projects/project-01/${project.slug}.png`; // Image from the images folder
