@@ -26,7 +26,7 @@ export function Projects({ range, locale }: ProjectsProps) {
             {displayedProjects.map((post) => (
                 <ProjectCard
                     key={post.slug}
-                    href={`ux/${post.slug}`}
+                    href={`machine_learning/${post.slug}`}
                     images={post.metadata.images}
                     title={post.metadata.title}
                     description={post.metadata.summary}
