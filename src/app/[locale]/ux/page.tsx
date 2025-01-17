@@ -88,6 +88,7 @@ export default function UX({ params: { locale } }: { params: { locale: string } 
                     </Flex>
                 );
             })}
+            <Text>projects found for locale: {locale}.</Text>
         </Flex>
     );
 }
