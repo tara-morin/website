@@ -49,7 +49,7 @@ const home = {
     description: `Portfolio website showcasing my work as a ${person.role}`,
     headline: <>Tara Morin's Portfolio</>,
     subline: <>Welcome to my website! </>,
-    moreinfo: <>My name is Tara, and I am an aspiring software designer located in Northern Virginia. I am primarily interested in front end web development. I have academic and project experience in front end coding, working with languages such as JavaScript and TypeScript, as well as academic and internship experience with UX/UI design.</>,
+    moreinfo: <>My name is Tara, and I am an aspiring software designer located in Northern Virginia.</>,
     endline:<>I implemented this website from a template using Next.js and OnceUI components. I customized it by creating my own additional components in TypeScript, adding main pages to the navigation bar, changing the themeing, and more. Click through the navigation bar for my projects and resume!</>
 }
 
@@ -71,7 +71,7 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>! </>
+        description: <> I am primarily interested in front end web development. I have academic and project experience in front end coding, working with languages such as JavaScript and TypeScript, as well as academic and internship experience with UX/UI design.</>
     },
     work: {
         display: true, // set to false to hide this section
