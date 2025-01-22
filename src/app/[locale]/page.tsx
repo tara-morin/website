@@ -97,7 +97,7 @@ export default function Home(
 							</Text>
 						</RevealFx>
 						<RevealFx translateY="12" delay={0.4}>
-							<Flex fillWidth gap="12">
+							<Flex fillWidth gap="24" direction="column">
 								<Text
 								color="#12007d"
 								>
