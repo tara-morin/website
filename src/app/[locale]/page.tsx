@@ -97,16 +97,12 @@ export default function Home(
 							</Text>
 						</RevealFx>
 						<RevealFx translateY="12" delay={0.4}>
-							<Flex fillWidth>
+							<Flex fillWidth gap="12">
 								<Text
 								color="#12007d"
 								>
 									{home.moreinfo}
 								</Text>
-							</Flex>
-						</RevealFx>
-						<RevealFx translateY="12" delay={0.4}>
-							<Flex fillWidth>
 								<Text
 								color="#12007d"
 								>
