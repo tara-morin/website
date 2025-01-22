@@ -6,9 +6,12 @@ import classNames from 'classnames';
 import { TextProps, CommonProps, SpacingProps } from '../interfaces'
 import { ColorScheme, ColorWeight, TextVariant, SpacingToken } from '../types';
 
-type TypeProps<T extends ElementType> = TextProps<T> & CommonProps & SpacingProps & ComponentPropsWithoutRef<T>;
+type TypeProps<T extends ElementType> = TextProps<T> & CommonProps & SpacingProps & ComponentPropsWithoutRef<T> &{
+    color?: string;
+};
 
 const Text = <T extends ElementType = 'span'>({
+    color,
     as,
     variant,
     size,
@@ -94,7 +97,7 @@ const Text = <T extends ElementType = 'span'>({
     return (
         <Component
             className={combinedClasses}
-            style={{ textAlign: align, textWrap: wrap, ...style }}
+            style={{ textAlign: align, textWrap: wrap,color, ...style }}
             {...props}>
             {children}
         </Component>

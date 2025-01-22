@@ -1,10 +1,8 @@
 import React from 'react';
 
 import { Heading, Flex, Text, RevealFx, Arrow, ColorInput } from '@/once-ui/components';
-import { Projects } from '@/components/ux/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
-import { Mailchimp } from '@/components';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
@@ -100,7 +98,7 @@ export default function Home(
 						<RevealFx translateY="12" delay={0.4}>
 							<Flex fillWidth>
 								<Text
-								color="#ff5a5f"
+								color="#12007d"
 								>
 									{home.moreinfo}
 								</Text>
