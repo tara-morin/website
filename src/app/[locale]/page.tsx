@@ -81,6 +81,7 @@ export default function Home(
 						<RevealFx
 							translateY="4" fillWidth justifyContent="flex-start" paddingBottom="m">
 							<Heading
+								color="#12007d"
 								wrap="balance"
 								variant="display-strong-l">
 								{home.headline}

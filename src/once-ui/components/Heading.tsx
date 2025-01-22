@@ -6,9 +6,13 @@ import classNames from 'classnames';
 import { TextProps, CommonProps, SpacingProps } from '../interfaces'
 import { ColorScheme, ColorWeight, TextVariant, SpacingToken } from '../types';
 
-type HeadingProps<T extends ElementType> = TextProps<T> & CommonProps & SpacingProps & ComponentPropsWithoutRef<T>;
+type HeadingProps<T extends ElementType> = TextProps<T> & CommonProps & SpacingProps & ComponentPropsWithoutRef<T> &{
+    color?:string;
+}
+;
 
 const Heading = <T extends ElementType = 'h1'>({
+    color,
     as,
     variant,
     size,
@@ -94,7 +98,7 @@ const Heading = <T extends ElementType = 'h1'>({
     return (
         <Component
             className={combinedClasses}
-            style={{ textAlign: align, textWrap: wrap, ...style }}
+            style={{ textAlign: align, textWrap: wrap,color, ...style }}
             {...props}>
             {children}
         </Component>
