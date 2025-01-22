@@ -105,6 +105,15 @@ export default function Home(
 								</Text>
 							</Flex>
 						</RevealFx>
+						<RevealFx translateY="12" delay={0.4}>
+							<Flex fillWidth>
+								<Text
+								color="#12007d"
+								>
+									{home.endline}
+								</Text>
+							</Flex>
+						</RevealFx>
 					</Flex>
 				
 			</Flex>
