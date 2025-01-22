@@ -100,6 +100,7 @@ export default function Home(
 						<RevealFx translateY="12" delay={0.4}>
 							<Flex fillWidth>
 								<Text
+								color="#12007d"
 								>
 									{home.moreinfo}
 								</Text>
