@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow } from '@/once-ui/components';
+import { Heading, Flex, Text, RevealFx, Arrow } from '@/once-ui/components';
 import { Projects } from '@/components/ux/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
@@ -46,7 +46,7 @@ export default function Home(
 ) {
 	unstable_setRequestLocale(locale);
 	const t = useTranslations();
-	const { home, about, person, newsletter } = renderContent(t);
+	const { home, person } = renderContent(t);
 	return (
 		<Flex
 			maxWidth="m" fillWidth gap="xl"
@@ -99,25 +99,10 @@ export default function Home(
 						</RevealFx>
 						<RevealFx translateY="12" delay={0.4}>
 							<Flex fillWidth>
-								<Button
-									id="about"
-									data-border="rounded"
-									href={`/${locale}/about`}
-									variant="tertiary"
-									size="m">
-									<Flex
-										gap="8"
-										alignItems="center">
-										{about.avatar.display && (
-											<Avatar
-												style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
-												src={person.avatar}
-												size="m"/>
-											)}
-											{t("about.title")}
-											<Arrow trigger="#about"/>
-									</Flex>
-								</Button>
+								<Text
+								>
+									{home.moreinfo}
+								</Text>
 							</Flex>
 						</RevealFx>
 					</Flex>
