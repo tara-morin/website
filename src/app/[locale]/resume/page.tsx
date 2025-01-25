@@ -2,7 +2,7 @@ import { Flex, Button } from "@/once-ui/components";
 
 export default function Resume() {
   return (
-    <Flex justifyConcent="center" direction="column">
+    <Flex direction="column">
       <Flex maxWidth={10} maxHeight={10}>
         <a
           href="/TMresume.pdf"
