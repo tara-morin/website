@@ -200,10 +200,9 @@ export default function About(
                                     </Flex>
                                 ))}
                             </Flex>
-                            //below is courses
                             <Flex direction="row">
                                 {about.studies.courses.map((course, index)=>(
-                                    <Flex key={`${course.name}-${index}`}>
+                                    <Flex key={`${course.name}-${index}`} direction="column">
                                         <Text
                                             id={course.name}>
                                         {course.name}
