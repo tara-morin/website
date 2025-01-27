@@ -47,7 +47,7 @@ export default function About(
         { 
             title: about.studies.title,
             display: about.studies.display,
-            items: about.studies.institutions.map(institution => institution.name)
+            items: [about.studies.institutions.map(institution => institution.name),about.studies.courses.map(courses=>courses.name)]
         },
         { 
             title: about.technical.title,
@@ -200,6 +200,17 @@ export default function About(
                                     </Flex>
                                 ))}
                             </Flex>
+                            //below is courses
+                            <Flex direction="row">
+                                {about.studies.courses.map((courses.name)=>(
+                                    <Flex key={courses.name}>
+                                        <Text
+                                            id={courses.name}
+                                            {courses.name}>
+                                        </Text>
+                                    </Flex>
+                                ))}
+                            </Flex>      
                         </>
                     )}
                 </Flex>
