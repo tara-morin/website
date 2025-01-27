@@ -100,7 +100,8 @@ export default function About(
             <Flex
                 fillWidth
                 mobileDirection="column" justifyContent="center">
-                {/* { about.avatar.display && (
+                //picture
+                { about.avatar.display && (
                     <Flex
                         className={styles.avatar}
                         minWidth="160" paddingX="l" paddingBottom="xl" gap="m"
@@ -130,7 +131,7 @@ export default function About(
                             </Flex>
                         )}
                     </Flex>
-                )} */}
+                )}
                 <Flex
                     className={styles.blockAlign}
                     fillWidth flex={9} maxWidth={40} direction="column">
@@ -139,7 +140,7 @@ export default function About(
                         fillWidth minHeight="160"
                         direction="column" justifyContent="center"
                         marginBottom="32">
-                        {about.calendar.display && (
+                        {/* {about.calendar.display && (
                             <Flex
                                 className={styles.blockAlign}
                                 style={{
@@ -165,7 +166,7 @@ export default function About(
                                     variant="tertiary"
                                     icon="chevronRight"/>
                             </Flex>
-                        )}
+                        )} */}
                         <Heading
                             className={styles.textAlign}
                             variant="display-strong-xl">
