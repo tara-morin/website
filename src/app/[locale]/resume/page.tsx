@@ -1,4 +1,4 @@
-import { Flex, Button } from "@/once-ui/components";
+import { Flex } from "@/once-ui/components";
 
 export default function Resume() {
   return (

@@ -29,12 +29,6 @@ export async function generateMetadata(
 				},
 			],
 		},
-		twitter: {
-			card: 'summary_large_image',
-			title,
-			description,
-			images: [ogImage],
-		},
 	};
 }
 
@@ -106,7 +100,7 @@ export default function About(
             <Flex
                 fillWidth
                 mobileDirection="column" justifyContent="center">
-                { about.avatar.display && (
+                {/* { about.avatar.display && (
                     <Flex
                         className={styles.avatar}
                         minWidth="160" paddingX="l" paddingBottom="xl" gap="m"
@@ -136,7 +130,7 @@ export default function About(
                             </Flex>
                         )}
                     </Flex>
-                )}
+                )} */}
                 <Flex
                     className={styles.blockAlign}
                     fillWidth flex={9} maxWidth={40} direction="column">
