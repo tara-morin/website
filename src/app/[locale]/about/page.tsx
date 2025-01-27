@@ -247,7 +247,7 @@ export default function About(
                                 variant="display-strong-s" marginBottom="40">
                                 {about.technical.title}
                             </Heading>
-                            <Flex
+                            {/* <Flex
                                 direction="column"
                                 fillWidth gap="l">
                                 {about.technical.skills.map((skill, index) => (
@@ -287,7 +287,7 @@ export default function About(
                                         )}
                                     </Flex>
                                 ))}
-                            </Flex>
+                            </Flex> */}
                         </>
                     )}
                 </Flex>
