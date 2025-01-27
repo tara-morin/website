@@ -73,47 +73,17 @@ const about = {
         title: 'Introduction',
         description: <> I am primarily interested in front end web development. I have academic and project experience in front end coding, working with languages such as JavaScript and TypeScript, as well as academic and internship experience with UX/UI design.</>
     },
-    work: {
-        display: true, // set to false to hide this section
-        title: 'Work Experience',
-        experiences: [
-            {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
-                achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
-                ],
-                images: [ // optional: leave the array empty if you don't want to display images
-                    {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
-                        width: 16,
-                        height: 9
-                    }
-                ]
-            },
-            {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
-                achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
-                ],
-                images: [ ]
-            }
-        ]
-    },
     studies: {
         display: true, // set to false to hide this section
-        title: 'Studies',
+        title: 'Education',
         institutions: [
             {
                 name: 'University of Virginia',
                 description: <>Double major in Computer Science and Cognitive Science.</>,
             }
+        ],
+        courses:[
+            {name:'Machine Learning'},{name:'Research Methods & Data Analysis'},{name:'Data Structures and Algorithms'},{name:'Human Computer Interaction in Software Development'}, {name:'Software Development Essentials'},{name:'Software Engineering'},{name:'Programming Languages for Web Applications'}
         ]
     },
     technical: {
