@@ -205,8 +205,8 @@ export default function About(
                                 {about.studies.courses.map((course, index)=>(
                                     <Flex key={`${course.name}-${index}`}>
                                         <Text
-                                            id={course.name}
-                                            {course.name}>
+                                            id={course.name}>
+                                        {course.name}
                                         </Text>
                                     </Flex>
                                 ))}
