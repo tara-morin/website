@@ -202,7 +202,7 @@ export default function About(
                             </Flex>
                             <Grid border="brand-medium" columns={4} gap="24" padding="24" radius="l"  background="brand-medium">
                                 {about.studies.courses.map((course, index)=>(
-                                    <Flex key={`${course.name}-${index}`} direction="column">
+                                    <Flex key={`${course.name}-${index}`}>
                                         <Text
                                             id={course.name}>
                                         {course.name}
