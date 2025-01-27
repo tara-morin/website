@@ -1,4 +1,4 @@
-import { Avatar, Button, Flex, Heading, Icon, IconButton, SmartImage, Tag, Text } from '@/once-ui/components';
+import { Avatar, Button, Flex, Heading, Icon, Grid, SmartImage, Tag, Text } from '@/once-ui/components';
 import { baseURL, renderContent } from '@/app/resources';
 import TableOfContents from '@/components/about/TableOfContents';
 import styles from '@/components/about/about.module.scss'
@@ -200,7 +200,7 @@ export default function About(
                                     </Flex>
                                 ))}
                             </Flex>
-                            <Flex direction="row">
+                            <Grid border="brand-medium" columns={4} gap="24" padding="24" radius="l"  background="brand-medium">
                                 {about.studies.courses.map((course, index)=>(
                                     <Flex key={`${course.name}-${index}`} direction="column">
                                         <Text
@@ -209,7 +209,7 @@ export default function About(
                                         </Text>
                                     </Flex>
                                 ))}
-                            </Flex>      
+                            </Grid>      
                         </>
                     )}
                 </Flex>
