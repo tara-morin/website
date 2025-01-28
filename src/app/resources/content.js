@@ -83,7 +83,7 @@ const about = {
             }
         ],
         courses:[
-            {name:'Machine Learning'},{name:'Research Methods & Data Analysis'},{name:'Data Structures and Algorithms'},{name:'Human Computer Interaction in Software Development'}, {name:'Software Development Essentials'},{name:'Software Engineering'},{name:'Programming Languages for Web Applications'}
+            {name:'Machine Learning'},{name:'Research Methods & Data Analysis'},{name:'Data Structures and Algorithms'},{name:'Computer Systems and Organization'},{name:'Human Computer Interaction in Software Development'}, {name:'Introduction to Cybersecurity'},{name:'Software Development Essentials'},{name:'Software Engineering'},{name:'Programming Languages for Web Applications'}
         ]
     },
     technical: {

@@ -218,9 +218,11 @@ export default function About(
                                                 padding="8"
                                                 border="neutral-medium"
                                                 radius="m"
-                                                style={{ textAlign: "center", background: "lightgray" }}
+                                                style={{ textAlign: "center" }}
                                             >
-                                                <Text id={course.name}>{course.name}</Text>
+                                                <Text id={course.name} color='#12007d'>
+                                                    {course.name}
+                                                    </Text>
                                             </Flex>
                                         ))}
                                 </Flex>
