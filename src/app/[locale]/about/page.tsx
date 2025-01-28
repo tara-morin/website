@@ -210,7 +210,6 @@ export default function About(
                                     padding: "8px",
                                     borderRadius: "8px",
                                     textAlign: "center", // Optional: Center-align text
-                                    wrap
                                 }}
                             >
                                 {course.name}
