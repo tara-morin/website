@@ -180,7 +180,7 @@ export default function About(
                                 {about.studies.title}
                             </Heading>
                             <Flex
-                                direction="column"
+                                direction="row"
                                 fillWidth gap="l" marginBottom="40">
                                 {about.studies.institutions.map((institution, index) => (
                                     <Flex
