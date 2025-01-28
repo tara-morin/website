@@ -91,7 +91,6 @@ export default function About(
             <Flex
                 fillWidth
                 mobileDirection="column" justifyContent="center">
-                //picture
                 { about.avatar.display && (
                     <Flex
                         className={styles.avatar}
@@ -233,12 +232,15 @@ export default function About(
                         </RevealFx>
                         </>
                     )}
+                    <Flex gap="24">
                     <Text>
                         I began my college journey with the intention to become a clinical psychologist. At the beginning of my 2nd year, I took my first coding class, and unexpectedly found my new passion. I have since done the planning and classwork to not only add the major of Computer Science, but keep the major of Cognitive Science. 
                         </Text>
                     <Text>
                         In my free time, I enjoy singing in choirs, taking ballet classes, and practicing the piano.
                     </Text>
+                    </Flex>
+                    
                 </Flex>
             </Flex>
         </Flex>
