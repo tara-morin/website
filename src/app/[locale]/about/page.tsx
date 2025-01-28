@@ -232,7 +232,8 @@ export default function About(
                         </RevealFx>
                         </>
                     )}
-                    <Flex gap="24">
+                    <RevealFx>
+                    <Flex gap="24" direction="row">
                     <Text>
                         I began my college journey with the intention to become a clinical psychologist. At the beginning of my 2nd year, I took my first coding class, and unexpectedly found my new passion. I have since done the planning and classwork to not only add the major of Computer Science, but keep the major of Cognitive Science. 
                         </Text>
@@ -240,7 +241,7 @@ export default function About(
                         In my free time, I enjoy singing in choirs, taking ballet classes, and practicing the piano.
                     </Text>
                     </Flex>
-                    
+                    </RevealFx>
                 </Flex>
             </Flex>
         </Flex>
