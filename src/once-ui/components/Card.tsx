@@ -13,9 +13,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
       <Flex
         ref={ref}
         background="surface"
-        transition="macro-medium"
         border="neutral-medium"
-        cursor="interactive"
         {...rest}
       >
         {children}
