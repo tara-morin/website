@@ -4,7 +4,6 @@ import TableOfContents from '@/components/about/TableOfContents';
 import styles from '@/components/about/about.module.scss'
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
-import { wrap } from 'module';
 
 export async function generateMetadata(
     {params: {locale}}: { params: { locale: string }}
@@ -201,7 +200,7 @@ export default function About(
                                     </Flex>
                                 ))}
                             </Flex>
-                            <Heading color='#12007d' variant="display-strong-s">
+                            <Heading color='#12007d' variant="display-strong-xs">
                                 My coursework at UVA includes:
                             </Heading>
                             <RevealFx>
@@ -234,6 +233,12 @@ export default function About(
                         </RevealFx>
                         </>
                     )}
+                    <Text>
+                        I began my college journey with the intention to become a clinical psychologist. At the beginning of my 2nd year, I took my first coding class, and unexpectedly found my new passion. I have since done the planning and classwork to not only add the major of Computer Science, but keep the major of Cognitive Science. 
+                        </Text>
+                    <Text>
+                        In my free time, I enjoy singing in choirs, taking ballet classes, and practicing the piano.
+                    </Text>
                 </Flex>
             </Flex>
         </Flex>
