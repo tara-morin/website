@@ -10,6 +10,7 @@ export { Button } from './Button';
 export type { ButtonProps } from './Button';
 export type { AnchorProps } from './Button';
 export { Carousel } from './Carousel';
+export { Card } from "./Card";
 export { Checkbox } from './Checkbox';
 export { Chip } from './Chip';
 export { ColorInput } from './ColorInput';
