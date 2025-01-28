@@ -200,7 +200,7 @@ export default function About(
                                     </Flex>
                                 ))}
                             </Flex>
-                            <Grid border="brand-medium" columns={2} gap="24" padding="24" radius="l"  background="brand-medium">
+                            <Grid border="brand-medium" columns={2} rows={3} gap="24" padding="24" radius="l">
                                 {about.studies.courses.map((course, index)=>(
                                         <Text
                                             id={course.name}>
