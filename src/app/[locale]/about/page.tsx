@@ -202,7 +202,6 @@ export default function About(
                                 ))}
                             </Flex>
                             
-                            {about.studies.courses.map((course, index) => (
                             <Flex direction="row" gap="24" padding="12" justifyContent="space-between">
                             {Array.from({ length: 3 }).map((_, colIndex) => (
                                 <Flex
@@ -228,7 +227,6 @@ export default function About(
                             ))}
                         </Flex>
                         
-                        ))}
                 
       
                         </>
