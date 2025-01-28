@@ -201,21 +201,23 @@ export default function About(
                                     </Flex>
                                 ))}
                             </Flex>
-                            <Grid border="brand-medium" columns="3" rows="3" gap="24" padding="12" radius="l">
+                            
                             {about.studies.courses.map((course, index) => (
+                            <Grid border="brand-medium" columns="3" rows="3" gap="24" padding="12" radius="l">
                             <Text
                                 key={`${course.name}-${index}`}
                                 id={course.name}
                                 style={{
                                     padding: "8px",
                                     borderRadius: "8px",
-                                    textAlign: "center", // Optional: Center-align text
+                                    textAlign: "center",
                                 }}
                             >
                                 {course.name}
                             </Text>
+                            </Grid>
                         ))}
-                    </Grid>
+                
       
                         </>
                     )}

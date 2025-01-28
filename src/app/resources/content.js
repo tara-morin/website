@@ -79,7 +79,7 @@ const about = {
         institutions: [
             {
                 name: 'University of Virginia',
-                description: <>Double major in Computer Science and Cognitive Science.</>,
+                description: <>B.A. in Computer Science, B.A. in Cognitive Science with concentration in Philosophy. GPA: 3.46</>,
             }
         ],
         courses:[
