@@ -4,6 +4,7 @@ import TableOfContents from '@/components/about/TableOfContents';
 import styles from '@/components/about/about.module.scss'
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
+import { wrap } from 'module';
 
 export async function generateMetadata(
     {params: {locale}}: { params: { locale: string }}
@@ -200,7 +201,7 @@ export default function About(
                                     </Flex>
                                 ))}
                             </Flex>
-                            <Grid border="brand-medium" columns="3" gap="24" padding="12" radius="l">
+                            <Grid border="brand-medium" columns="3" rows="3" gap="24" padding="12" radius="l">
                             {about.studies.courses.map((course, index) => (
                             <Text
                                 key={`${course.name}-${index}`}
@@ -208,8 +209,8 @@ export default function About(
                                 style={{
                                     padding: "8px",
                                     borderRadius: "8px",
-                                    background: "lightgray", // Optional: Add background for better visualization
                                     textAlign: "center", // Optional: Center-align text
+                                    wrap
                                 }}
                             >
                                 {course.name}
