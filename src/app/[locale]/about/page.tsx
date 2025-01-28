@@ -212,7 +212,7 @@ export default function About(
                                     style={{ flex: 1 }}
                                 >
                                     {about.studies.courses
-                                        .slice(colIndex * 3, colIndex * 3 + 3) // Take 3 items per column
+                                        .filter((_, courseIndex) => courseIndex % 3 === colIndex) // Distribute courses across columns
                                         .map((course, index) => (
                                             <Flex
                                                 key={`${course.name}-${index}`}
