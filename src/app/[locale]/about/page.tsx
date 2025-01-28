@@ -1,4 +1,4 @@
-import { Avatar, Button, Flex, Heading, Icon, Grid, SmartImage, Tag, Text,Card } from '@/once-ui/components';
+import { Avatar, Button, Flex, Heading, Icon, Grid, SmartImage, Tag, Text,RevealFx } from '@/once-ui/components';
 import { baseURL, renderContent } from '@/app/resources';
 import TableOfContents from '@/components/about/TableOfContents';
 import styles from '@/components/about/about.module.scss'
@@ -201,7 +201,10 @@ export default function About(
                                     </Flex>
                                 ))}
                             </Flex>
-                            
+                            <Heading color='#12007d' variant="display-strong-s">
+                                My coursework at UVA includes:
+                            </Heading>
+                            <RevealFx>
                             <Flex direction="row" gap="24" padding="12" justifyContent="space-between">
                             {Array.from({ length: 3 }).map((_, colIndex) => (
                                 <Flex
@@ -228,9 +231,7 @@ export default function About(
                                 </Flex>
                             ))}
                         </Flex>
-                        
-                
-      
+                        </RevealFx>
                         </>
                     )}
                 </Flex>
