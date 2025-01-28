@@ -200,7 +200,7 @@ export default function About(
                                     </Flex>
                                 ))}
                             </Flex>
-                            <Grid border="brand-medium" columns={2} rows={3} gap="24" padding="24" radius="l">
+                            <Grid border="brand-medium" columns="3" rows="3" gap="24" padding="24" radius="l">
                                 {about.studies.courses.map((course, index)=>(
                                     <Card key={`${course.name}-${index}`} padding="16" radius="m">
                                     <Text id={course.name}>
