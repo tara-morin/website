@@ -180,7 +180,7 @@ export default function About(
                                 {about.studies.title}
                             </Heading>
                             <Flex
-                                direction="row"
+                                direction="column"
                                 fillWidth gap="l" marginBottom="40">
                                 {about.studies.institutions.map((institution, index) => (
                                     <Flex
@@ -202,10 +202,12 @@ export default function About(
                             </Flex>
                             <Grid border="brand-medium" columns={2} rows={3} gap="24" padding="24" radius="l">
                                 {about.studies.courses.map((course, index)=>(
+                                        <Flex>
                                         <Text
                                             id={course.name}>
                                         {course.name}
                                         </Text>
+                                        </Flex>
                                 ))}
                             </Grid>      
                         </>
