@@ -18,6 +18,7 @@ type Metadata = {
     tag?: string;
     figmaURL: string;
     team: Team[];
+    video_link:string;
 };
 
 function isValidURL(url: string): boolean {
@@ -54,6 +55,7 @@ function readMDXFile(filePath: string) {
         tag: data.tag || '',
         figmaURL: data.figmaURL || '', // Use empty string if not specified
         team: data.team || [],
+        video_link: data.video_link || '',
     };
 
     return { metadata, content };
