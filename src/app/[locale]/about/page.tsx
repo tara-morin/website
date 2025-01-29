@@ -232,7 +232,7 @@ export default function About(
                         </RevealFx>
                         </>
                     )}
-                    <RevealFx speed="slow" delay={5}>
+                    <RevealFx speed="slow" delay={3}>
                     <Flex gap="24" direction="column">
                     <Text>
                         I began my college journey with the intention to become a clinical psychologist. At the beginning of my 2nd year, I took my first coding class, and unexpectedly found my new passion. I have since done the planning and classwork to not only add the major of Computer Science, but keep the major of Cognitive Science. 
