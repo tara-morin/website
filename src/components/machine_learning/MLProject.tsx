@@ -28,6 +28,7 @@ export function MLProject({ slug, locale }: ProjectsProps) {
                 title={project.metadata.title}
                 description={project.metadata.summary}
                 content={project.content}
+                video_link={project.video_link}
                 avatars={project.metadata.team?.map((member) => ({ src: member.avatar })) || []}/>
         </Flex>
     );
