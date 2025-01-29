@@ -72,6 +72,7 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 				},
 			],
 		},
+        video_link,
 	}
 }
 
