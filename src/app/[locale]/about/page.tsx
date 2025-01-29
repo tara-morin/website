@@ -202,7 +202,7 @@ export default function About(
                             <Heading color='#12007d' variant="display-strong-xs">
                                 My coursework at UVA includes:
                             </Heading>
-                            <RevealFx>
+                            <RevealFx speed="slow" delay={1}>
                             <Flex direction="row" gap="24" padding="12" justifyContent="space-between">
                             {Array.from({ length: 3 }).map((_, colIndex) => (
                                 <Flex
@@ -232,7 +232,7 @@ export default function About(
                         </RevealFx>
                         </>
                     )}
-                    <RevealFx>
+                    <RevealFx speed="slow" delay={5}>
                     <Flex gap="24" direction="column">
                     <Text>
                         I began my college journey with the intention to become a clinical psychologist. At the beginning of my 2nd year, I took my first coding class, and unexpectedly found my new passion. I have since done the planning and classwork to not only add the major of Computer Science, but keep the major of Cognitive Science. 
