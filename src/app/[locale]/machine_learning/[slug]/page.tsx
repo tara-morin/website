@@ -121,6 +121,14 @@ export default function Project(
                         {formatDate(post.metadata.publishedAt)}
                     </Text>
                 </Flex>
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src={post.metadata.video_link}
+                    frameBorder="0" 
+                    data-allow="autoplay; encrypted-media" 
+                    allowFullScreen>
+        </iframe>
                 <CustomMDX source={post.content} />
             </Flex>
             <ScrollToHash />
