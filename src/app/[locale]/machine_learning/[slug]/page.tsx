@@ -123,11 +123,7 @@ export default function Project(
                         {formatDate(post.metadata.publishedAt)}
                     </Text>
                 </Flex>
-                <Flex>
-                    <Text>
-                        Click below to watch the video summary of the project, designed for the everyday viewer:
-                        </Text>
-                    </Flex>
+                
                 <iframe 
                     width="560" 
                     height="315" 
@@ -137,6 +133,11 @@ export default function Project(
                     allowFullScreen>
         </iframe>
                 <CustomMDX source={post.content} />
+                <Flex gap="12">
+                    <Text>
+                        Click below to watch the video summary of the project, designed for the everyday viewer:
+                        </Text>
+                    </Flex>
             </Flex>
             <ScrollToHash />
         </Flex>
