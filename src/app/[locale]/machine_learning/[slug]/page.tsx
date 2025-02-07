@@ -124,7 +124,13 @@ export default function Project(
                     </Text>
                 </Flex>
                 
-                <iframe 
+                <CustomMDX source={post.content} />
+                <Flex gap="12">
+                    <Text>
+                        Click below to watch the video summary of the project, designed for the everyday viewer:
+                        </Text>
+                    </Flex>
+                    <iframe 
                     width="560" 
                     height="315" 
                     src={post.metadata.video_link}
@@ -132,12 +138,6 @@ export default function Project(
                     data-allow="autoplay; encrypted-media" 
                     allowFullScreen>
         </iframe>
-                <CustomMDX source={post.content} />
-                <Flex gap="12">
-                    <Text>
-                        Click below to watch the video summary of the project, designed for the everyday viewer:
-                        </Text>
-                    </Flex>
             </Flex>
             <ScrollToHash />
         </Flex>
