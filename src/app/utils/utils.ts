@@ -57,6 +57,7 @@ function readMDXFile(filePath: string) {
         figmaURL: data.figmaURL || '', // Use empty string if not specified
         team: data.team || [],
         video_link: data.video_link || '',
+        colabURL: data.colabURL || '',
     };
 
     return { metadata, content };
