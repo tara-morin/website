@@ -71,7 +71,7 @@ export default function machine_learning({ params: { locale } }: { params: { loc
                     alt={project.metadata?.title || 'Untitled Project'}
                     src={projectImage}
                 />
-                <Text variant="body-default-s" color="white">
+                <Text variant="body-default-s" color="navy">
                     {project.metadata?.summary || 'No summary available.'}
                 </Text>
                 <Button
