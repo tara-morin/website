@@ -19,6 +19,7 @@ type Metadata = {
     figmaURL: string;
     team: Team[];
     video_link:string;
+    colabURL: string;
 };
 
 function isValidURL(url: string): boolean {
