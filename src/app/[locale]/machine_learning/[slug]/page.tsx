@@ -133,7 +133,7 @@ export default function Project(
                         Click below to watch the video summary of the project, designed for the everyday viewer:
                         </Text>
                     <iframe 
-                    width="560" 
+                    width="800" 
                     height="315" 
                     src={post.metadata.video_link}
                     frameBorder="0" 
@@ -159,9 +159,7 @@ export default function Project(
                             View code on Google Colab
                         </a>
                 </Flex>
-        )
-
-        }
+        )}
             </Flex>
             <Flex>
                 <Text>
