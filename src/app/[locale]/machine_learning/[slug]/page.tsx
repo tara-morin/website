@@ -49,7 +49,8 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 		images,
 		image,
 		team,
-        video_link
+        video_link,
+        colabURL
 	} = post.metadata
 	let ogImage = image
 		? `https://${baseURL}${image}`
@@ -73,6 +74,7 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 			],
 		},
         video_link,
+        colabURL,
 	}
 }
 
@@ -125,11 +127,11 @@ export default function Project(
                 </Flex>
                 
                 <CustomMDX source={post.content} />
+                {post.metadata.video_link && (
                 <Flex gap="12">
                     <Text>
                         Click below to watch the video summary of the project, designed for the everyday viewer:
                         </Text>
-                    </Flex>
                     <iframe 
                     width="560" 
                     height="315" 
@@ -138,7 +140,34 @@ export default function Project(
                     data-allow="autoplay; encrypted-media" 
                     allowFullScreen>
         </iframe>
+        </Flex>
+        )}
+        {post.metadata.colabURL && (
+            <Flex>
+                <a
+                        href={post.metadata.colabURL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            textDecoration: 'none',
+                            color: 'navy',
+                            fontSize: '1.2em',
+                            fontWeight: 'bold',
+                            marginTop: '16px',
+                            font: 'Lora',
+                        }}>
+                            View code on Google Colab
+                        </a>
+                </Flex>
+        )
+
+        }
             </Flex>
+            <Flex>
+                <Text>
+
+                </Text>
+                </Flex>
             <ScrollToHash />
         </Flex>
     );
