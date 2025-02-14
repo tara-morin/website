@@ -128,9 +128,9 @@ export default function Project(
                 
                 <CustomMDX source={post.content} />
                 {post.metadata.video_link && (
-                <Flex gap="12">
+                <Flex >
                     <Text>
-                        Click below to watch the video summary of the project, designed for the everyday viewer:
+                        Click to watch the video summary of the project, designed for the everyday viewer:
                         </Text>
                     <iframe 
                     width="800" 
