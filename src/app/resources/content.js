@@ -71,7 +71,7 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <> I am primarily interested in data analytics and front end web development. I have academic and project experience in front end coding, working with languages such as JavaScript and TypeScript, as well as academic and internship experience with UX/UI design.</>
+        description: <> I am primarily interested in data analytics and web development. I have academic and project experience in front end coding, working with languages such as JavaScript and TypeScript, as well as academic and internship experience with UX/UI design.</>
     },
     studies: {
         display: true, // set to false to hide this section
