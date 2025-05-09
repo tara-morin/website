@@ -4,7 +4,7 @@ tmn7vs@virginia.edu| 304-620-6551 | Purcellville, Virginia
 **EDUCATION**  
 **University of Virginia**	                 Charlottesville, VA  
 B.A. in Computer Science and B.A. in Cognitive Science	May 2025  
-Relevant Coursework: Data Structures and Algorithms 1 & 2, Computer Systems and Organization, Research Methods and Data Analysis, HCI in Software Development, Machine Learning, Software Development Essentials  
+Relevant Coursework: Data Structures and Algorithms, Research Methods and Data Analysis, HCI in Software Development, Machine Learning, Software Development Essentials, Software Engineering, Programming Languages
 **UVA in Greece Creative Interaction Design Program**, *UX Researcher and Designer*                                          May- June 2024
 
 * Interviewed over 50 tourists as potential users to assess their travel needs and challenges   
@@ -52,5 +52,5 @@ Relevant Coursework: Data Structures and Algorithms 1 & 2, Computer Systems and 
 
 # **SKILLS**
 
-**Programming:** Java, Python, R Studio, C, JavaScript, HTML,  Next.js, x86 Assembly  
-**Tech:** Microsoft Office, Google Suite, Canva, Figma, Framer, Adobe Photoshop, Audacity, Reaper
+**Languages:** Java, Python, R, C, JavaScript, TypeScript, HTML,  CSS, SQL, PHP
+**Tech:** Django, Angular, Heroku, Git, Microsoft Office, Canva, Figma, Framer, OnceUI, Audacity, Reaper
