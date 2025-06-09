@@ -14,6 +14,7 @@ const routes = {
     '/about':   true,
     '/ux':    true,
     '/machine_learning':    true,
+    '/web_dev': true,
     '/resume': true,
 }
 

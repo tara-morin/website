@@ -14,6 +14,7 @@ const renderContent = (t) => {
             about,
             machine_learning,
             ux,
+            web_dev,
             resume
         }
     }

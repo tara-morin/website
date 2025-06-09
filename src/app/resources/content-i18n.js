@@ -167,6 +167,14 @@ const createI18nContent = (t) => {
         // All projects will be listed on the /home and /work routes
     }
 
+    const web_dev = {
+        label: t("web_dev.label"),
+        title: t("web_dev.title"),
+        description: t("web_dev.description", {name: person.name})
+        // Create new project pages by adding a new .mdx file to app/blog/posts
+        // All projects will be listed on the /home and /work routes
+    }
+
     const resume = {
         label: t("resume.label"),
         title: t("resume.title"),
@@ -253,6 +261,7 @@ const createI18nContent = (t) => {
         about,
         machine_learning,
         ux,
+        web_dev,
         resume
     }
 };

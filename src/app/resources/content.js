@@ -142,6 +142,14 @@ const ux = {
     // All projects will be listed on the /home and /work routes
 }
 
+const web_dev = {
+    label: 'Website Development ',
+    title: 'Web development projects',
+    description: `Links to websites I have created.`
+    // Create new project pages by adding a new .mdx file to app/blog/posts
+    // All projects will be listed on the /home and /work routes
+}
+
 const resume = {
     label: 'Resume',
     title: 'My resume',
@@ -221,4 +229,4 @@ const resume = {
     ]
 }
 
-export { person, social, newsletter, home, about, machine_learning, ux, resume };
+export { person, social, newsletter, home, about, machine_learning, ux, web_dev, resume };

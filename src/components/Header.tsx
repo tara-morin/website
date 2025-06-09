@@ -14,42 +14,6 @@ import { renderContent } from "@/app/resources";
 import { useTranslations } from "next-intl";
 import { i18n } from "@/app/resources/config";
 
-// type TimeDisplayProps = {
-//     timeZone: string;
-//     locale?: string;  // Optionally allow locale, defaulting to 'en-GB'
-// };
-
-// const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = 'en-GB' }) => {
-//     const [currentTime, setCurrentTime] = useState('');
-
-//     useEffect(() => {
-//         const updateTime = () => {
-//             const now = new Date();
-//             const options: Intl.DateTimeFormatOptions = {
-//                 timeZone,
-//                 hour: '2-digit',
-//                 minute: '2-digit',
-//                 second: '2-digit',
-//                 hour12: false,
-//             };
-//             const timeString = new Intl.DateTimeFormat(locale, options).format(now);
-//             setCurrentTime(timeString);
-//         };
-
-//         updateTime();
-//         const intervalId = setInterval(updateTime, 1000);
-
-//         return () => clearInterval(intervalId);
-//     }, [timeZone, locale]);
-
-//     return (
-//         <>
-//             {currentTime}
-//         </>
-//     );
-// };
-
-// export default TimeDisplay;
 
 export const Header = () => {
     const router = useRouter();
@@ -68,7 +32,7 @@ export const Header = () => {
     }
 
     const t = useTranslations();
-    const { person, home, about, machine_learning, ux, resume } = renderContent(t);
+    const { person, home, about, machine_learning, ux, web_dev, resume } = renderContent(t);
 
     return (
         <>
@@ -131,6 +95,14 @@ export const Header = () => {
                                     href={`/${params?.locale}/machine_learning`}
                                     selected={pathname.startsWith('/machine_learning')}>
                                     <Flex paddingX="2" hide="s">{machine_learning.label}</Flex>
+                                </ToggleButton>
+                            )}
+                            { routes['/web_dev'] && (
+                                <ToggleButton
+                                    prefixIcon="globe"
+                                    href={`/${params?.locale}/web_dev`}
+                                    selected={pathname.startsWith('/web_dev')}>
+                                    <Flex paddingX="2" hide="s">{web_dev.label}</Flex>
                                 </ToggleButton>
                             )}
                             { routes['/resume'] && (
