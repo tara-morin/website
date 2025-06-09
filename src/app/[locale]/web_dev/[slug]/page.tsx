@@ -49,8 +49,7 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 		images,
 		image,
 		team,
-        video_link,
-        colabURL
+        link
 	} = post.metadata
 	let ogImage = image
 		? `https://${baseURL}${image}`
@@ -73,8 +72,7 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 				},
 			],
 		},
-        video_link,
-        colabURL,
+        link,
 	}
 }
 
@@ -127,10 +125,10 @@ export default function Project(
                 </Flex>
                 
                 <CustomMDX source={post.content} />
-        {/* {post.metadata.colabURL && (
+        {post.metadata.link && (
             <Flex>
                 <a
-                        href={post.metadata.colabURL}
+                        href={post.metadata.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
@@ -141,10 +139,10 @@ export default function Project(
                             marginTop: '16px',
                             font: 'Lora',
                         }}>
-                            View code on Google Colab
+                            Visit Website
                         </a>
                 </Flex>
-        )} */}
+        )}
             </Flex>
             <Flex>
                 <Text>
