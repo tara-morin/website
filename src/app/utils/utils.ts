@@ -59,6 +59,7 @@ function readMDXFile(filePath: string) {
         team: data.team || [],
         video_link: data.video_link || '',
         colabURL: data.colabURL || '',
+        link: data.link || '',
     };
 
     return { metadata, content };
