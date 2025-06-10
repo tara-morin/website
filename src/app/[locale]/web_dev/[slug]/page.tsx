@@ -8,7 +8,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { formatDate } from '@/app/utils/formatDate';
 import ScrollToHash from '@/components/ScrollToHash';
-import { MLProject } from '@/components/machine_learning/MLProject';
+import { OneProject } from '@/components/ux/OneProject';
 
 interface WorkParams {
     params: {
@@ -49,7 +49,6 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 		images,
 		image,
 		team,
-        link
 	} = post.metadata
 	let ogImage = image
 		? `https://${baseURL}${image}`
@@ -72,7 +71,12 @@ export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 				},
 			],
 		},
-        link,
+		twitter: {
+			card: 'summary_large_image',
+			title,
+			description,
+			images: [ogImage],
+		},
 	}
 }
 
@@ -99,9 +103,9 @@ export default function Project(
                     variant="tertiary"
                     size="s"
                     prefixIcon="chevronLeft">
-                    ML Projects
+                    Web Development Projects
                 </Button>
-            <MLProject slug={slug} locale={locale} />
+            <OneProject slug={slug} locale={locale} />
             <Flex
                 fillWidth maxWidth="xs" gap="16"
                 direction="column">
@@ -110,6 +114,28 @@ export default function Project(
                     {post.metadata.title}
                 </Heading>
             </Flex>
+            {post.metadata.link && (
+                <Flex
+                    as="section"
+                    direction="column"
+                    alignItems="center"
+                    marginTop="l">
+                    <a
+                        href={post.metadata.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            textDecoration: 'none',
+                            color: 'blue',
+                            fontSize: '1.2em',
+                            fontWeight: 'bold',
+                            marginTop: '16px',
+                            font: 'Lora',
+                        }}>
+                        Visit the site
+                    </a>
+                </Flex>
+            )}
             <Flex style={{ margin: 'auto' }}
                 as="article"
                 maxWidth="xs" fillWidth
@@ -123,34 +149,9 @@ export default function Project(
                         {formatDate(post.metadata.publishedAt)}
                     </Text>
                 </Flex>
-                
                 <CustomMDX source={post.content} />
-        {post.metadata.link && (
-            <Flex>
-                <a
-                        href={post.metadata.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                            textDecoration: 'none',
-                            color: 'navy',
-                            fontSize: '1.2em',
-                            fontWeight: 'bold',
-                            marginTop: '16px',
-                            font: 'Lora',
-                        }}>
-                            Visit Website
-                        </a>
-                </Flex>
-        )}
             </Flex>
-            <Flex>
-                <Text>
-
-                </Text>
-                </Flex>
             <ScrollToHash />
         </Flex>
     );
 }
-
