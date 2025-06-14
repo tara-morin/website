@@ -1,8 +1,9 @@
 "use client";
 
-import { AvatarGroup, Flex, Heading, RevealFx, SmartImage, SmartLink, Text } from "@/once-ui/components";
+import { Flex, RevealFx, SmartImage} from "@/once-ui/components";
 import { useEffect, useState } from "react";
 import { useTranslations } from 'next-intl';
+import { getDefaultAutoSelectFamily } from "net";
 
 interface ImageProps {
     href: string;
@@ -57,12 +58,6 @@ export const ImageCarousel: React.FC<ImageProps> = ({
         <Flex
             fillWidth gap="m"
             direction="column"
-            // minWidth={20}
-            // maxWidth={50}
-            // minHeight={30}
-            // maxHeight={60}
-            // alignItems="start"
-            // justifyContent="center"
             >
             {images[activeIndex] && <Flex onClick={handleImageClick}>
                 <RevealFx
@@ -81,9 +76,9 @@ export const ImageCarousel: React.FC<ImageProps> = ({
                             ...(images.length > 1 && {
                                 cursor: 'pointer',
                             }),
-                            minWidth:50,
-                            maxWidth:200,
-                            minHeight:400,
+                            width: '100%',
+                            height: 'auto',
+                            maxWidth:900,
                             maxHeight:900,
                         }}/>
                 </RevealFx>
