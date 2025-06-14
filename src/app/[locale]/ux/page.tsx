@@ -79,7 +79,7 @@ export default function UX({ params: { locale } }: { params: { locale: string } 
                                 font: 'Lora',
                             }}
                             href={`/ux/${project.slug}`}
-                            variant="primary"
+                            // variant="primary"
                             suffixIcon="chevronRight"
                         >
                             Read More
