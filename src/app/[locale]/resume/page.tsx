@@ -19,7 +19,7 @@ export default function Resume() {
           // }}
         >
           Download my Resume
-        </a>
+        </Button>
       </Flex>
       <Flex fillWidth>
         <div
