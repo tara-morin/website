@@ -1,3 +1,5 @@
+"use client";
+
 import { getPosts } from '@/app/utils/utils';
 import { Flex, Heading, SmartImage, Text, Button } from '@/once-ui/components';
 import { baseURL, renderContent } from '@/app/resources';
