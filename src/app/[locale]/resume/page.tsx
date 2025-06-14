@@ -1,21 +1,22 @@
-import { Flex } from "@/once-ui/components";
+import { Flex, Button } from "@/once-ui/components";
 
 export default function Resume() {
   return (
     <Flex direction="column">
       <Flex maxWidth={10} maxHeight={10} justifyContent="center">
-        <a
+        <Button
           href="/TMresume.pdf"
           download="TMresume.pdf"
-          style={{
-            padding: "1rem 2rem",
-            backgroundColor: "#a3fcff",
-            color: "#12007d",
-            borderRadius: "5px",
-            textDecoration: "none",
-            fontWeight: "bold",
-            fontSize: "1.2rem",
-          }}
+          variant="primary"
+          // style={{
+          //   padding: "1rem 2rem",
+          //   backgroundColor: "#a3fcff",
+          //   color: "#12007d",
+          //   borderRadius: "5px",
+          //   textDecoration: "none",
+          //   fontWeight: "bold",
+          //   fontSize: "1.2rem",
+          // }}
         >
           Download my Resume
         </a>
