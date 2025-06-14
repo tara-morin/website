@@ -124,14 +124,7 @@ export default function Project(
                         href={post.metadata.figmaURL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{
-                            textDecoration: 'none',
-                            color: 'blue',
-                            fontSize: '1.2em',
-                            fontWeight: 'bold',
-                            marginTop: '16px',
-                            font: 'Lora',
-                        }}>
+                        className='link'>
                         View on Figma
                     </a>
                 </Flex>

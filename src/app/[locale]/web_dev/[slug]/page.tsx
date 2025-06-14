@@ -124,14 +124,7 @@ export default function Project(
                         href={post.metadata.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{
-                            textDecoration: 'none',
-                            color: 'blue',
-                            fontSize: '1.2em',
-                            fontWeight: 'bold',
-                            marginTop: '16px',
-                            font: 'Lora',
-                        }}>
+                        className='link'>
                         Visit the site
                     </a>
                 </Flex>
