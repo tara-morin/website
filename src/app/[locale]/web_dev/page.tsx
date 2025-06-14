@@ -75,7 +75,6 @@ export default function web_dev({ params: { locale } }: { params: { locale: stri
                         </Text>
                         <Button
                             style={{
-                                color: '#FFFFFF',
                                 font: 'Lora',
                             }}
                             href={`/web_dev/${project.slug}`}

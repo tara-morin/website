@@ -74,7 +74,6 @@ export default function UX({ params: { locale } }: { params: { locale: string } 
                         </Text>
                         <Button
                             style={{
-                                color: '#FFFFFF',
                                 font: 'Lora',
                             }}
                             href={`/ux/${project.slug}`}

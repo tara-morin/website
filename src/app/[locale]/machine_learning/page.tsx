@@ -76,8 +76,6 @@ export default function machine_learning({ params: { locale } }: { params: { loc
                 </Text>
                 <Button
                     style={{
-                        backgroundColor: '#12007d',
-                        color: '#FFFFFF',
                         font: 'Lora',
                     }}
                     href={`/machine_learning/${project.slug}`}
