@@ -73,13 +73,12 @@ export default function UX({ params: { locale } }: { params: { locale: string } 
                             {project.metadata.summary}
                         </Text>
                         <Button
-                            className="bg-[#12007d] hover:bg-[#1f10d0]"
                             style={{
                                 color: '#FFFFFF',
                                 font: 'Lora',
                             }}
                             href={`/ux/${project.slug}`}
-                            // variant="primary"
+                            variant="primary"
                             suffixIcon="chevronRight"
                         >
                             Read More

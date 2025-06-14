@@ -23,14 +23,14 @@
 
 .primary {
     box-shadow: inset 0 var(--solid-inset-distance) var(--solid-inset-size) var(--solid-inset-color-brand);
-    background: var(--brand-solid-medium);
+    background: #1f10d0;
     border-style: solid;
     border-width: var(--solid-border-width);
     border-color: var(--solid-border-color-brand);
     color: var(--brand-on-solid-strong);
 
     &:hover, &:focus {
-        background: var(--brand-solid-strong);
+        background: #B8FAFE;
     }
 }
 

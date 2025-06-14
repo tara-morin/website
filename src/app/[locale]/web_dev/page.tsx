@@ -75,7 +75,6 @@ export default function web_dev({ params: { locale } }: { params: { locale: stri
                         </Text>
                         <Button
                             style={{
-                                backgroundColor: '#12007d',
                                 color: '#FFFFFF',
                                 font: 'Lora',
                             }}
