@@ -78,6 +78,8 @@ export const ImageCarousel: React.FC<ImageProps> = ({
                             }),
                             width: '100%',
                             height: 'auto',
+                            minWidth: 200,
+                            minHeight: 200,
                             maxWidth:900,
                             maxHeight:900,
                         }}/>
