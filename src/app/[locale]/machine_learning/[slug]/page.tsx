@@ -148,13 +148,14 @@ export default function Project(
                         href={post.metadata.colabURL}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className='link'
                         style={{
-                            textDecoration: 'none',
-                            color: 'navy',
-                            fontSize: '1.2em',
-                            fontWeight: 'bold',
-                            marginTop: '16px',
-                            font: 'Lora',
+                            // textDecoration: 'none',
+                            // color: 'navy',
+                            // fontSize: '1.2em',
+                            // fontWeight: 'bold',
+                            // marginTop: '16px',
+                            // font: 'Lora',
                         }}>
                             View code on Google Colab
                         </a>

@@ -44,6 +44,20 @@ a {
     }
 }
 
+.link {
+  text-decoration: none;
+  color: navy;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Lora', serif;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: crimson;
+}
+
+
 /* SCROLLBAR */
 ::-webkit-scrollbar {
     background: var(--static-transparent);
