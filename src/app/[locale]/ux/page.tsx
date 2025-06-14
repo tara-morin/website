@@ -1,11 +1,8 @@
-"use client";
-
 import { getPosts } from '@/app/utils/utils';
 import { Flex, Heading, SmartImage, Text, Button } from '@/once-ui/components';
 import { baseURL, renderContent } from '@/app/resources';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
 
 export async function generateMetadata(
     { params: { locale } }: { params: { locale: string } }
@@ -46,7 +43,6 @@ export default function UX({ params: { locale } }: { params: { locale: string } 
 
     const t = useTranslations();
     const { ux } = renderContent(t);
-    const [hoveredButton, setButton] = useState<string | null>(null);
     return (
         <Flex fillWidth maxWidth="m" direction="column" gap="l">
             <Heading variant="display-strong-l">{ux.title}</Heading>
@@ -77,10 +73,8 @@ export default function UX({ params: { locale } }: { params: { locale: string } 
                             {project.metadata.summary}
                         </Text>
                         <Button
-                            onMouseEnter={() => setButton(project.slug)}
-                            onMouseLeave={() => setButton(null)}
+                            className="bg-[#12007d] hover:bg-[#1f10d0]"
                             style={{
-                                backgroundColor: hoveredButton === project.slug ? '#1f10d0' : '#12007d',
                                 color: '#FFFFFF',
                                 font: 'Lora',
                             }}
