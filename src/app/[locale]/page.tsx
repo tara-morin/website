@@ -74,10 +74,10 @@ export default function Home(
 			<Flex
 				fillWidth
 				direction="column"
-				paddingY="l" gap="m" alignItems="center" justifyContent="center">
+				paddingY="l" gap="m" justifyContent="center">
 					<Flex
 						direction="column"
-						fillWidth maxWidth="s" alignItems="center">
+						fillWidth maxWidth="s" alignItems="center" align="center">
 						<RevealFx
 							translateY="4" fillWidth justifyContent="flex-start" paddingBottom="m">
 							<Heading
@@ -88,7 +88,7 @@ export default function Home(
 							</Heading>
 						</RevealFx>
 						<RevealFx
-							translateY="8" delay={0.2} fillWidth justifyContent="flex-start" paddingBottom="m">
+							translateY="8" delay={0.2} fillWidth justifyContent="flex-start" paddingBottom="m" align="center">
 							<Text
 								wrap="balance"
 								onBackground="neutral-weak"
