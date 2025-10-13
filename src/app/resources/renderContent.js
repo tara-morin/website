@@ -11,6 +11,7 @@ const renderContent = (t) => {
             social,
             newsletter,
             home,
+            about,
             machine_learning,
             ux,
             web_dev,
