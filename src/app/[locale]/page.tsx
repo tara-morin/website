@@ -74,7 +74,7 @@ export default function Home(
 			<Flex
 				fillWidth
 				direction="column"
-				paddingY="l" gap="m">
+				paddingY="l" gap="m" alignItems="center">
 					<Flex
 						direction="column"
 						fillWidth maxWidth="s">
