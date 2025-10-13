@@ -44,15 +44,15 @@ const createI18nContent = (t) => {
         },
     ]
 
-    const home = {
-        label: t("home.label"),
-        title: t("home.title", {name: person.name}),
-        description: t("home.description", {role: person.role}),
-        headline: <>{t("home.headline")}</>,
-        subline: <>{t("home.subline")}</>
-    }
+    // const home = {
+    //     label: t("home.label"),
+    //     title: t("home.title", {name: person.name}),
+    //     description: t("home.description", {role: person.role}),
+    //     headline: <>{t("home.headline")}</>,
+    //     subline: <>{t("home.subline")}</>
+    // }
 
-    const about = {
+    const home = {
         label: t("about.label"),
         title: t("about.title"),
         description: t("about.description", {name: person.name, role: person.role, location: person.location}),
@@ -258,7 +258,6 @@ const createI18nContent = (t) => {
         social,
         newsletter,
         home,
-        about,
         machine_learning,
         ux,
         web_dev,
