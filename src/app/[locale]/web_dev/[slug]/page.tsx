@@ -129,6 +129,21 @@ export default function Project(
                     </a>
                 </Flex>
             )}
+            {post.metadata.link && (
+                <Flex
+                    as="section"
+                    direction="column"
+                    alignItems="center"
+                    marginTop="l">
+                    <a
+                        href={post.metadata.gitURL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className='link'>
+                        View code on GitHub
+                    </a>
+                </Flex>
+            )}
             <Flex style={{ margin: 'auto' }}
                 as="article"
                 maxWidth="xs" fillWidth

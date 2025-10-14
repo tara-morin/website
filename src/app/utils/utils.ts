@@ -20,7 +20,8 @@ type Metadata = {
     team: Team[];
     video_link:string;
     colabURL: string;
-    link:string;
+    link: string;
+    gitURL: string;
 };
 
 function isValidURL(url: string): boolean {
