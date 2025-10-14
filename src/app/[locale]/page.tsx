@@ -77,7 +77,7 @@ export default function Home(
 				paddingY="l" gap="m" justifyContent="center" align="center">
 					<Flex
 						direction="column"
-						fillWidth maxWidth="s" alignItems="center" align="center">
+						fillWidth maxWidth="s" align="center">
 						<RevealFx
 							translateY="4" fillWidth justifyContent="flex-start" paddingBottom="m">
 							<Heading
