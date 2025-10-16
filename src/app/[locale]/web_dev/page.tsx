@@ -70,9 +70,9 @@ export default function web_dev({ params: { locale } }: { params: { locale: stri
                             alt={project.metadata.title}
                             src={projectImage}
                         />
-                        <Text variant="body-default-s" color="white">
-                            {project.metadata.summary}
-                        </Text>
+                        <Text variant="body-default-s" color="navy">
+                                            {project.metadata?.summary || 'No summary available.'}
+                            </Text>
                         <Button
                             style={{
                                 font: 'Lora',
